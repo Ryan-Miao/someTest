@@ -4,7 +4,7 @@
 	<groupId>com.test</groupId>
 	<artifactId>SomeTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	
 	<!-- 属性配置 -->
   <properties>
