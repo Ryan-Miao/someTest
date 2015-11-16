@@ -14,6 +14,7 @@
       <dom4j.version>1.6.1</dom4j.version>
       <org.slf4j.slf4j-log4j12.version>1.7.2</org.slf4j.slf4j-log4j12.version>
       <json-lib.version>2.4</json-lib.version>
+      <commons-lang.version>3.3.2</commons-lang.version>
 
       <!--web-->
       <mysql-connector-java.version>5.1.20</mysql-connector-java.version>
@@ -22,8 +23,19 @@
       <com.alibaba.druid.version>1.0.15</com.alibaba.druid.version>
       <httpclient.version>4.5.1</httpclient.version>
       
+      
   </properties>
-  
+   <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.glassfish.jersey</groupId>
+                <artifactId>jersey-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>2.15</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -37,20 +49,29 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${org.slf4j.slf4j-log4j12.version}</version>
 		</dependency>
+		<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+		<!--环信  -->
+		<!-- jersey -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
+        </dependency>
 		<!-- httpclient -->
 		<dependency>
 		  <groupId>org.apache.httpcomponents</groupId>
 		  <artifactId>httpclient</artifactId>
-		  <version>${httpclient.version}</version>
-		</dependency>
-		<dependency>
-		  <groupId>org.apache.httpcomponents</groupId>
-		  <artifactId>fluent-hc</artifactId>
-		  <version>${httpclient.version}</version>
-		</dependency>
-		<dependency>
-		  <groupId>org.apache.httpcomponents</groupId>
-		  <artifactId>httpclient-cache</artifactId>
 		  <version>${httpclient.version}</version>
 		</dependency>
 		<dependency>
