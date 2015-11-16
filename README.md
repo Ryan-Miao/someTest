@@ -1,3 +1,3 @@
 # someTest
 My learning
-测试一下
+在工作中遇到一些问题，然后进行的一些测试
