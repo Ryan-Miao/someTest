@@ -1,0 +1,6 @@
+jdbcUrl2 = jdbc:mysql://localhost/wedding?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user = root
+password =123456
+devMode = true
+
+picUrl2 = http://localhost

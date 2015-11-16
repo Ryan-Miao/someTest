@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>普通客户</title>
+<link href="/web/css/page.css" rel="stylesheet" type="text/css" />
+<link href="/web/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/web/js/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/web/js/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+<script type="text/javascript" src="/web/js/jquery/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="/web/js/hlmanage.js" ></script>
+<script type="text/javascript" src="/web/js/imgPreview.js" ></script>
+<script src="/web/js/Area.js" type="text/javascript"></script>
+<script src="/web/js/AreaData_min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/web/js/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/web/js/bootstrap/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/web/js/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+</head>
+
+<body>
+	<!-- 创建用户 -->
+	#parse("/web/pub/createuser.html")
+
+	<!--黑色背景透明罩子-->
+	<div class="bkcreate_3" id="bn"></div>
+
+	<div class="top_nav">
+		<div class="top_content">
+			<!-- 导航条 -->
+			#parse("/web/pub/navigation.html")
+			<div class="pk_user fl">
+				<img src="/web/image/user.jpg" height="70px;" width="70px" class="fl" /> <span>用户管理</span>
+				<p>用户注册资料</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container_1">
+			<div class="pk_list fl">
+				<ul>
+					<li style="background-color: #FFF;"><a href="/back/user/userList">用户注册资料</a> </li>
+					<li><a href="/back/user/memberList">会员用户</a> </li>
+					<li><a href="/back/user/recommendList">推荐用户</a> </li>
+				</ul>
+			</div>
+			<div class="pk_schifm fl">
+				#parse("/web/pub/findlist.html") 
+				#findlist("/back/user/userList" $!seachcondition $!conditionval)
+				<div class="ct_user fr">
+					<!--创建用户-->
+					<div class="createuser_btn" onclick="createuser()";>
+						<a href="#">创建用户</a>
+					</div>
+				</div>
+			</div>
+			<div class="ifmlist fl">
+				<!--信息列表-->
+				#parse("/web/pub/tablelist.html")
+			</div>
+			#parse("/web/pub/page.html") 
+			#pager( "/back/user/userList" "seachcondition=$!seachcondition&conditionval=$!conditionval&district=$!district" $page)
+	</div>
+
+</body>
+</html>
