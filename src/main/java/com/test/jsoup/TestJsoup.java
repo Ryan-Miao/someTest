@@ -30,7 +30,7 @@ public class TestJsoup {
 
 
 	public void AnlysisHTMLByFile() throws IOException {
-		File file = new File(System.getProperty("user.dir") + "\\normalUser.html");
+		File file = new File(System.getProperty("user.dir") + "\\文件");
 		Document doc = Jsoup.parse(file, "UTF-8");
 		Elements eles = doc.getElementsByTag("a");
 		for (Element e : eles) {
