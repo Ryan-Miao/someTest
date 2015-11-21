@@ -1,6 +1,7 @@
 
 package com.test.java;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class TestDate {
@@ -20,6 +21,17 @@ public class TestDate {
 		System.out.println(now.get(Calendar.SECOND)+"秒");
 		System.out.println(now.get(Calendar.MILLISECOND));
 		System.out.println(now.get(Calendar.MONDAY));
+	}
+	
+	public void dateFormat(){
+		SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println(sdf.format(System.currentTimeMillis()));
+		
+	}
+	
+	public static void main(String[] args) {
+		TestDate td = new TestDate();
+		td.dateFormat();
 	}
 
 }
