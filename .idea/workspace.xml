@@ -818,7 +818,7 @@
       <workItem from="1447810897626" duration="6097000" />
       <workItem from="1447897765627" duration="15434000" />
       <workItem from="1448088830784" duration="5300000" />
-      <workItem from="1448244544086" duration="7456000" />
+      <workItem from="1448244544086" duration="7477000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1447667731631</created>
@@ -862,11 +862,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448260430275</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="编辑距离">
+      <created>1448271486552</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1448271486552</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62092000" />
+    <option name="totallyTimeSpent" value="62113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
@@ -950,7 +956,8 @@
     <MESSAGE value="删除不必要的文件" />
     <MESSAGE value="test" />
     <MESSAGE value="算法" />
-    <option name="LAST_COMMIT_MESSAGE" value="算法" />
+    <MESSAGE value="编辑距离" />
+    <option name="LAST_COMMIT_MESSAGE" value="编辑距离" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
