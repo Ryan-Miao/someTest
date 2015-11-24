@@ -141,6 +141,9 @@ public class TestReflect {
         Array.set(temp, 0, 100);
         System.out.println("修改之后数组第一个元素："+Array.get(temp,0));
 
+        System.out.println("=================================分割线=============================================");
+
+
 
     }
 
