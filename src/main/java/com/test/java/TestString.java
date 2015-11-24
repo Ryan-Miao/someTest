@@ -104,6 +104,8 @@ public class TestString {
 				System.out.print((int) c - 96);
 			}
 			System.out.println();
+			
+			sc.close();
 		}
 
 	}
