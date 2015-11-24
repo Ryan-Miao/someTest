@@ -8,12 +8,6 @@ import java.lang.reflect.Array;
  */
 public class TestUpdate {
     public static void main(String[] args) {
-
-    }
-}
-
-class hello{
-    public static void main(String[] args) {
         int [] temp ={1,2,3,4,5,6,7};
         int [] newTemp = (int[])arrInc(temp,15);
         print(newTemp);
@@ -52,3 +46,4 @@ class hello{
         }
     }
 }
+
