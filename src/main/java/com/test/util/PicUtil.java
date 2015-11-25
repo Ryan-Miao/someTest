@@ -118,7 +118,7 @@ public class PicUtil {
 					conn.getInputStream()));
 			String line = null;
 			while ((line = reader.readLine()) != null) {
-				strBuf.append(line).append("\n");
+				strBuf.append(line);
 			}
 			res = strBuf.toString();
 			reader.close();
