@@ -25,14 +25,20 @@ interface Subject{
 
 //定义真实项目
 class RealSubject implements Subject{
+    public RealSubject(){}
     @Override
     public String say(String name, int age) {
+        System.out.println(name+"开始工作");
         return name+" "+age;
     }
 }
 
 class MyInvocationHandler implements InvocationHandler{
-    private Object obj = null;
+    private Object obj;
+    public MyInvocationHandler(){}
+    public MyInvocationHandler(Subject obj){
+        this.obj = obj;
+    }
 
     public Object bind(Object obj){
         this.obj = obj;
@@ -41,7 +47,9 @@ class MyInvocationHandler implements InvocationHandler{
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("预处理工作");
         Object temp = method.invoke(this.obj,args);
+        System.out.println("后续工作");
         return temp;
     }
 
