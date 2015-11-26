@@ -2,7 +2,7 @@
 
 ## My learning  git
 在工作中遇到一些问题，然后进行的一些测试    
- 1. 从远程库clone到本地，本地会新建一个git库，主分为master.
+ 1. 从远程库clone到本地，本地会新建一个git库，主分支为master.
  2. 主分支是master,要稳定，安全。所以平时都去dev开发？  
 >创建了dev之后，开发，提交。但是master忘记合并了。   
 >然后，用户1:checkout master, merge dev, and then  push. thus, master is 2.0    
@@ -33,7 +33,7 @@
 > public static void main
 > ```    
 
-**强调：** 
+  **强调：** 
 >\*强调\* 或者 \_强调\_ (示例：斜体)    
 >\*\*加重强调\*\* 或者 \_\_加重强调\_\_ (示例：粗体)    
 >\*\*\*特别强调\*\*\* 或者 \_\_\_特别强调\_\_\_ (示例：粗斜体)   
