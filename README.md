@@ -23,7 +23,7 @@
  *代码：*制表符或至少四个空格缩进的行（前提是前面空一行）或用esc下的反引号括起来：    
  
             this is code
- or  ·this code·
+ or  `this code`
                             
        
  
