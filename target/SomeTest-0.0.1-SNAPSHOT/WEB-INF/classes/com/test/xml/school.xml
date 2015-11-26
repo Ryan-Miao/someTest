@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<school name="实验中学" position="河北石家庄">
-	<grade name="年级" size="1">
-		<class name="班级" size="70">
-			<student name="tl0p" age="13" sex="0">学生</student>
-		</class>
-	</grade>
-</school>
