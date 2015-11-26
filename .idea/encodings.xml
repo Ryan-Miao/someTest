@@ -4,10 +4,6 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/test/arithmetic/Equation.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/test/arithmetic/InputBinary.java" charset="UTF-8" />
-<<<<<<< HEAD
-    <file url="file://$PROJECT_DIR$/src/main/resources/easeMobConfig.properties" charset="GBK" />
-=======
     <file url="file://$PROJECT_DIR$/src/main/java/com/test/reflect/ObjectCopy.java" charset="UTF-8" />
->>>>>>> 23b9a7f8ff1cba5bb0a19d13c036c03dc165fcb3
   </component>
 </project>
