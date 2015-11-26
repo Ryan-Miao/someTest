@@ -3,6 +3,7 @@ package com.test.reflect;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import java.lang.reflect.*;
+import java.util.List;
 
 /**
  * Created by Administrator on 2015/11/21.
@@ -139,7 +140,9 @@ public class TestReflect {
         System.out.println("数组长度"+Array.getLength(temp));
         System.out.println("数组的第一个元素"+Array.get(temp, 0));
         Array.set(temp, 0, 100);
-        System.out.println("修改之后数组第一个元素："+Array.get(temp,0));
+        System.out.println("修改之后数组第一个元素：" + Array.get(temp, 0));
+
+        System.out.println("=================================分割线=============================================");
 
 
     }
@@ -149,6 +152,7 @@ public class TestReflect {
 class Test{
     private  String name;
     private  int age;
+    private  Long l;
 
     /**
      * 无参构造函数必须要有，否则，反射构造无参出错
