@@ -9,11 +9,11 @@
  >  用户2： first pull dev，then push dev, then  checkout master,pull,push, thus,master is 3.0   
  >   实验了几次，当冲突的时候不知所措，稀里糊涂的弄好。最后，反正主代码没问题。大概也搞清楚了用法。    
  >   注意几点：  
- >>             *  先pull,保证你的版本不会落后    
- >>             *  pull之后有冲突修改好      
- >>             *  add  -> commit ->push     
+ > *  先pull,保证你的版本不会落后    
+ > *  pull之后有冲突修改好      
+ > *  add  -> commit ->push     
     
-  3.  刚开接触遇到的最大问题：master比dev先进    
+ 3. 刚开接触遇到的最大问题：master比dev先进    
           是说，经常不知不觉在master分支下修改东西。然后提交，反而dev进度落后了。这个问题肯定要改，但是问题怎么办？     
           好吧，解决。checkout dev -> pull -> merge master -> resolve conflict -> push   
           这次问题解决后养成如下习惯：在dev下开发，dev提交后，转master，先pull，再解决冲突，再merge dev,解决冲突，再push 
