@@ -154,8 +154,6 @@ public class TestReflect {
 class Test{
     private  String name;
     private  int age;
-    private  Long l;
-
     /**
      * 无参构造函数必须要有，否则，反射构造无参出错
      */
