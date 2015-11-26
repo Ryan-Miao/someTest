@@ -18,12 +18,15 @@
         这次问题解决后养成如下习惯：在dev下开发，dev提交后，转master，先pull，再解决冲突，再merge dev,解决冲突，再push    
  ---
 ## git中的read.md文件编辑语言：Markdown    
- _标题：_ 用\#表示<br/>
+ _标题：_ 用\#表示,数量表示标题的档次，类似h1,h2,h3<br/>
  *换行：*用br标签后至少两个空格后回车   
  *代码：*制表符或至少四个空格缩进的行（前提是前面空一行）或用esc下的反引号括起来：    
  
             this is code
- or  `this code` ,语法高亮要用三个反引号+语言：
+ or  `this code` ,语法高亮要用三个反引号+语言  代码  三个反引号：
+  \`\`\`java   
+ public static void main
+ \`\`\`
  ```java   
  public static void main
  ```
