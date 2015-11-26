@@ -23,15 +23,15 @@
  **标题：** 用\#表示,数量表示标题的档次，类似h1,h2,h3<br/>
  **换行：**用br标签后至少两个空格后回车   
  **代码：**制表符或至少四个空格缩进的行（前提是前面空一行）或用esc下的反引号括起来：    
- 
-            this is code
- or  `this code` ,语法高亮要用三个反引号+语言  代码  三个反引号：<br>
-  \`\`\`java   <br>
- public static void main  <br>
- \`\`\`
- ```java   
- public static void main
- ```
+>
+>            this is code
+> or  `this code` ,语法高亮要用三个反引号+语言  代码  三个反引号：<br>
+>  \`\`\`java   <br>
+> public static void main  <br>
+> \`\`\`
+> ```java   
+> public static void main
+> ```
  **强调：** 
 >\*强调\* 或者 \_强调\_ (示例：斜体)
 >\*\*加重强调\*\* 或者 \_\_加重强调\_\_ (示例：粗体)
