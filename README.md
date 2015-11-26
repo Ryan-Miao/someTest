@@ -23,9 +23,9 @@
  *代码：*制表符或至少四个空格缩进的行（前提是前面空一行）或用esc下的反引号括起来：    
  
             this is code
- or  `this code` ,语法高亮要用三个反引号+语言  代码  三个反引号：
-  \`\`\`java   
- public static void main
+ or  `this code` ,语法高亮要用三个反引号+语言  代码  三个反引号：<br>
+  \`\`\`java   <br>
+ public static void main  <br>
  \`\`\`
  ```java   
  public static void main
