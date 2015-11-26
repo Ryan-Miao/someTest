@@ -1,9 +1,11 @@
 package com.test.reflect;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
-import java.lang.reflect.*;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 /**
  * Created by Administrator on 2015/11/21.
@@ -152,8 +154,6 @@ public class TestReflect {
 class Test{
     private  String name;
     private  int age;
-    private  Long l;
-
     /**
      * 无参构造函数必须要有，否则，反射构造无参出错
      */
