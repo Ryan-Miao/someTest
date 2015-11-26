@@ -1,9 +1,11 @@
 package com.test.reflect;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
-import java.lang.reflect.*;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 /**
  * Created by Administrator on 2015/11/21.
