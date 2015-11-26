@@ -89,7 +89,11 @@ public class ObjectCopy {
 }
 
 class A implements Serializable{
-    private B b;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private B b;
     private C c;
 
     public A() {
@@ -128,7 +132,11 @@ class A implements Serializable{
 }
 
 class B implements Serializable{
-    private C c;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private C c;
     private Integer int1;
     private Integer int2;
 
@@ -174,7 +182,11 @@ class B implements Serializable{
 }
 
 class C implements Serializable{
-    private String string1;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String string1;
     private String string2;
 
     public C() {
