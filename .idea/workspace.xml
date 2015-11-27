@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6b9f1d-f287-4cd1-ab47-a89945642e15" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SomeTest.iws" />
@@ -64,7 +65,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6621787">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+              <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -816,7 +817,7 @@
       <workItem from="1448501373484" duration="1995000" />
       <workItem from="1448530631644" duration="618000" />
       <workItem from="1448531647926" duration="6117000" />
-      <workItem from="1448589348604" duration="1326000" />
+      <workItem from="1448589348604" duration="1474000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1447667731631</created>
@@ -908,11 +909,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448590573058</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="readme">
+      <created>1448590683769</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1448590683769</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81679000" />
+    <option name="totallyTimeSpent" value="81827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1044" extended-state="0" />
@@ -1407,7 +1414,7 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6621787">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
           <folding />
         </state>
       </provider>
