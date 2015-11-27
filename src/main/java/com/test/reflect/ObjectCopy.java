@@ -12,7 +12,7 @@ public class ObjectCopy {
     public static void main(String[] args) throws Exception {
         A baseObject = new A(new B(new C("bString1", "bString2"), 1, 2), new C(
                 "cString1", "cString2"));
-        A copyObject = (A) copyObject(baseObject, "java.lang.Integer",
+        A copyObject = (A) coloneByRef(baseObject, "java.lang.Integer",
                 "java.lang.String");
 
         System.out.println(baseObject);
@@ -35,18 +35,16 @@ public class ObjectCopy {
      * baseObject 要拷贝的对象
      * noCopyClassNames 不深度拷贝的对象属性
      */
-    public static Object copyObject(Object baseObject,
+    public static Object coloneByRef(Object baseObject,
                                     String... noCopyClassNames) throws Exception {
         Object copyObject = baseObject.getClass().newInstance();
-
         Field[] fields = baseObject.getClass().getDeclaredFields();
-
         for (Field field : fields) {
             field.setAccessible(true);
             if (checkClassType(field.getType().getName(), noCopyClassNames)) {
                 field.set(copyObject, field.get(baseObject));
             } else {
-                field.set(copyObject, copyObject(field.get(baseObject),
+                field.set(copyObject, coloneByRef(field.get(baseObject),
                         noCopyClassNames));
             }
         }
@@ -55,9 +53,6 @@ public class ObjectCopy {
 
     public static boolean checkClassType(String className,
                                          String[] noCopyClassNames) {
-        if(className.equals("")){
-
-        }
         for (String noCopyClassName : noCopyClassNames) {
             if (className.equals(noCopyClassName)) {
                 return true;
@@ -92,7 +87,6 @@ class A implements Serializable{
     /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	private B b;
     private C c;
 
@@ -135,7 +129,6 @@ class B implements Serializable{
     /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	private C c;
     private Integer int1;
     private Integer int2;
@@ -185,7 +178,6 @@ class C implements Serializable{
     /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	private String string1;
     private String string2;
 
