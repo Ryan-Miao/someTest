@@ -1,5 +1,7 @@
 package com.test.http.httpclient;
 
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -9,8 +11,12 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.client.utils.URIUtils;
 import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.conn.ssl.SSLContextBuilder;
+import org.apache.http.conn.ssl.TrustStrategy;
 import org.apache.http.entity.*;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -23,12 +29,19 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
+import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLHandshakeException;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by Administrator on 2015/12/1.
@@ -336,6 +349,77 @@ public class http基础 {
             }
         };
     }
+
+    /**
+     *拦截器
+     */
+    public void interceptor(){
+        HttpClientContext localContext = HttpClientContext.create();
+        AtomicInteger count = new AtomicInteger(1);
+        localContext.setAttribute("count",count);
+
+    }
+
+    /**
+     * 测试ssl
+     * 环信token获取
+     */
+    @Test
+    public void httppara() throws IOException {
+        String target = "http://a1.easemob.com/easemob-playground/test1/token";
+
+        List<NameValuePair> headers = new ArrayList<>();
+        headers.add(new BasicNameValuePair("Content-Type", "application/json"));
+
+        JsonNodeFactory factory = new JsonNodeFactory(false);
+        ObjectNode objectNode = factory.objectNode();
+        objectNode.put("grant_type", "client_credentials");
+        objectNode.put("client_id", "YXA6wDs-MARqEeSO0VcBzaqg5A");
+        objectNode.put("client_secret", "YXA6JOMWlLap_YbI_ucz77j-4-mI0JA");
+
+        HttpPost httpPost = new HttpPost(target);
+        for (NameValuePair header : headers) {
+            httpPost.addHeader(header.getName(),header.getValue());
+        }
+        httpPost.setEntity(new StringEntity(objectNode.toString(),"utf-8"));
+
+        httpclient=getClient(true);
+
+        HttpResponse response = httpclient.execute(httpPost);
+        System.out.println(response.toString());
+        HttpEntity entity1 = response.getEntity();
+        System.out.println(EntityUtils.toString(entity1,"utf-8"));
+
+    }
+
+    public static HttpClient getClient(boolean isSSL){
+
+        if (isSSL) {
+            try {
+                SSLContext sslContext = new SSLContextBuilder()
+                        .loadTrustMaterial(null, new TrustStrategy() {
+                            //信任所有
+                            public boolean isTrusted(X509Certificate[] chain,
+                                                     String authType) throws CertificateException {
+                                return true;
+                            }
+                        }).build();
+                SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(
+                        sslContext);
+                return HttpClients.custom().setSSLSocketFactory(sslsf).build();
+            } catch (KeyManagementException e) {
+                e.printStackTrace();
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            } catch (KeyStoreException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return httpclient;
+    }
+
+
 
 
 }

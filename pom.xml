@@ -20,7 +20,7 @@
       <com.jfinal.version>2.0</com.jfinal.version>
       <com.jfinal.jetty-server.version>8.1.8</com.jfinal.jetty-server.version>
       <com.alibaba.druid.version>1.0.15</com.alibaba.druid.version>
-      <httpclient.version>4.5.1</httpclient.version>
+      <httpclient.version>4.3.3</httpclient.version>
       
       
   </properties>
