@@ -8,6 +8,7 @@ package com.test.java.obj;
 public class TestObj {
 
     private static int i=47;
+    private int j;
 
     public TestObj() {
     }
@@ -17,13 +18,14 @@ public class TestObj {
         TestObj obj = new TestObj();
         TestObj obj2 = new TestObj();
         System.out.println("初始化：");
-        System.out.println(obj.i);
-        System.out.println(obj2.i);
+        System.out.println("i="+obj.i+",j="+obj.j);
+        System.out.println("i="+obj2.i+",j="+obj2.j);
 
         System.out.println("++");
         obj.i++;
-        System.out.println(obj.i);
-        System.out.println(obj2.i);
+        obj.j++;
+        System.out.println("i="+obj.i+",j="+obj.j);
+        System.out.println("i="+obj2.i+",j="+obj2.j);
 
     }
 
