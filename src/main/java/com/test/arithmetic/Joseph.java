@@ -1,6 +1,6 @@
 package com.test.arithmetic;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -52,7 +52,7 @@ public class Joseph {
      * 这里忽略了list的内部实现，似乎并不好表示复杂度
      */
     public static int forallArrayList(int n,int m) throws InterruptedException {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new LinkedList<>();
         for (int i = 0; i < n; i++) {
             list.add(i+1);
         }
@@ -106,8 +106,40 @@ public class Joseph {
         System.out.println(last+1+" ");
     }
 
+    /**
+     * 循环链表
+     */
+    public static void circleList(int n, int m){
+        String h = "head";
+        CircleList circleList = new CircleList(h);
+        for (int i = 1; i < n+1; i++) {
+            circleList.addLast(i);
+        }
+//        System.out.println(circleList);
+        LinkedListNode head = circleList.getHead();
+        LinkedListNode node = head.next;
+        int s = 1;
+        while (circleList.size>0){
+            while (s!=m){
+                node = node.next;
+                if(node.object==h){
+                    node=node.next;
+                }
+                s++;
+            }
+            s=0;
+            if(circleList.size==1){
+                System.out.println(node.object+" ");
+                break;
+            }
+            node = circleList.remove(node);
+        }
+    }
+
+
+
     public static void main(String[] args) throws InterruptedException {
-        int n =44444441;
+        int n =4444441;
         int m = 3;
         long a = System.currentTimeMillis();
         forall(n, m);
@@ -119,10 +151,6 @@ public class Joseph {
 //        long e = System.currentTimeMillis();
 //        System.out.println("list用时："+(e-s));
 
-        long s1 = System.currentTimeMillis();
-        sequenceInfer(n,m);
-        long e1 = System.currentTimeMillis();
-        System.out.println("数列推导公式用时："+(e1-s1));
         /**维护ArrayList的开销很大啊
          38996
          计算次数：43026596
@@ -131,6 +159,184 @@ public class Joseph {
          计算次数：3582300
          list用时：108622
          */
+        long s1 = System.currentTimeMillis();
+        sequenceInfer(n,m);
+        long e1 = System.currentTimeMillis();
+        System.out.println("数列推导公式用时："+(e1-s1));
+        long s2 = System.currentTimeMillis();
+        circleList(n,m);
+        long e2 = System.currentTimeMillis();
+        System.out.println("循环链表用时："+(e2-s2));
 
+    }
+}
+
+/**
+ * 链表节点
+ */
+class LinkedListNode{
+    public LinkedListNode previous;//前一节点
+    public LinkedListNode next;//后一节点
+    public Object object;//节点的值
+    public long timestamp;//修改时间
+
+    public LinkedListNode(LinkedListNode previous, LinkedListNode next, Object object) {
+        this.previous = previous;
+        this.next = next;
+        this.object = object;
+        timestamp = System.currentTimeMillis();
+    }
+    public void remove(){
+        previous.next = next;
+        next.previous = previous;
+    }
+
+    @Override
+    public String toString() {
+        String s = previous == null ? "null" : previous.object.toString();
+        String s1 = next == null ? "null" : next.object.toString();
+
+        return "LinkedListNode{" +
+                "previous=" + s +
+                ", next=" +  s1+
+                ", object=" + object +
+                ", timestamp=" + timestamp +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        LinkedListNode head = new LinkedListNode(null,null,"head");
+        LinkedListNode node = new LinkedListNode(null,null,"node");
+        node.next = head.next;
+        node.previous = head;
+        node.previous.next = node;
+        System.out.println(node);
+        System.out.println(head);
+
+    }
+}
+
+/**
+ * 循环链表
+ */
+class CircleList{
+    int size = 0;
+    //头指针，第一个节点的前面，最后一个节点的后面
+    private LinkedListNode head = new LinkedListNode(null,null,"head");
+
+    public LinkedListNode getHead() {
+        return head;
+    }
+
+    public CircleList() {
+        head.next = head.previous = head;
+    }
+    public CircleList(Object object) {
+        head.object = object;
+        head.next = head.previous = head;
+    }
+
+    public LinkedListNode getFirst(){
+        LinkedListNode node = head.next;
+        if(node == head){
+            return null;
+        }
+        return node;
+    }
+
+    public LinkedListNode getLast(){
+        LinkedListNode node = head.previous;
+        if(node == null){
+            return null;
+        }
+        return node;
+    }
+
+    /**
+     * 插入第一个位置，head结点之后
+     * @param node
+     * @return
+     */
+    public LinkedListNode addFirst(LinkedListNode node){
+        node.next = head.next;
+        node.previous = head;
+        node.previous.next = node;
+        node.next.previous = node;
+        size++;
+        return node;
+    }
+
+    /**
+     * 将此值插入到链表的第一个位置,head之后
+     * @param object
+     * @return
+     */
+    public LinkedListNode addFirst(Object object){
+        LinkedListNode node = new LinkedListNode(head, head.next, object);
+        node.previous.next = node;
+        node.next.previous = node;
+        size++;
+        return node;
+    }
+
+    /**
+     * 将此值插入到链表的最后一个位置，head之前
+     * @param object
+     * @return
+     */
+    public LinkedListNode addLast(Object object){
+        LinkedListNode node = new LinkedListNode(head.previous, head, object);
+        node.previous.next = node;
+        node.next.previous = node;
+        size++;
+        return node;
+    }
+
+    /**
+     * 移除节点
+     * @param node
+     */
+    public LinkedListNode remove(LinkedListNode node){
+        LinkedListNode next = null;
+        if(node!=null){
+            next = node.previous;
+            node.remove();
+            size--;
+        }
+        return next;
+    }
+
+    //清空
+    public void clear(){
+        LinkedListNode node = getLast();
+        while(node!=null){
+            node.remove();;
+            node=getLast();
+        }
+        //re -initialize
+        head.next = head.previous = head;
+        size=0;
+    }
+
+    public String toString(){
+        LinkedListNode node = head.next;
+        StringBuffer sb = new StringBuffer();
+        sb.append(head.object+"->");
+        while (node!=head){
+            sb.append(node.object).append("->");
+            node = node.next;
+        }
+        sb.append("head");
+
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        CircleList circleList = new CircleList();
+        for (int i = 0; i < 10; i++) {
+            circleList.addLast(i);
+        }
+        System.out.println(circleList.getHead());
+        System.out.println(circleList.toString());
     }
 }
