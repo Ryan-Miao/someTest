@@ -75,7 +75,7 @@ class Children extends Parent{
     public void getFiled(){
         System.out.print(a+" ");
         System.out.print(b+" ");
-        System.out.print(d+" ");
+        System.out.print(this.d+" ");
         System.out.print(c+" ");
         System.out.println(newf+" ");
     }
@@ -87,6 +87,10 @@ class Children extends Parent{
         System.out.println("child self new function");
     }
 
+
+}
+
+class Testpc{
     public static void main(String[] args) {
         Children c = new Children();
         Parent p = new Children();
@@ -104,7 +108,7 @@ class Children extends Parent{
         parent.getFiled();
 
         System.out.println("=========属性:私有属性无法访问，其他属性来自自身，上转型对象的属性来自本身而不是子类，上转型对象不能方法子类的新属性===============");
-        System.out.println(c.a+" "+c.b+" "+c.d+" "+c.c+" "+c.newf);
+        System.out.println(c.a+" "+c.b+" "+c.d+" "+c.newf);
         System.out.println(p.a+" "+p.b+" "+p.d);
     }
 }
