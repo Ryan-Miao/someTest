@@ -47,11 +47,6 @@ public class Parent {
         System.out.println(c+" ");
     }
 
-    public static void main(String[] args) {
-        Parent parent = new Parent();
-        System.out.println(parent.c);
-    }
-
 
 }
 
@@ -99,7 +94,7 @@ class Testpc{
 //        System.out.println(p.c);
         //父类对象在父类内部可以调用私有属性，但在其他类中不可以,也就是说私有只能在本类的中使用
 //        System.out.println(parent.c);
-        System.out.println("=========pub方法被覆盖,方法中的成员变量来自子类,上转型对象只能调用自己被覆盖的方法，该方法中可以调用子类的属性===========");
+        System.out.println("=========方法被覆盖,方法中的成员变量来自子类,上转型对象只能调用自己被覆盖的方法，该方法中可以调用子类的属性===========");
         System.out.println("子类");
         c.getFiled();
         System.out.println("上转型父类");
@@ -107,7 +102,7 @@ class Testpc{
         System.out.println("父类");
         parent.getFiled();
 
-        System.out.println("=========属性:私有属性无法访问，其他属性来自自身，上转型对象的属性来自本身而不是子类，上转型对象不能方法子类的新属性===============");
+        System.out.println("=========属性:私有属性无法访问，其他属性来自自身，上转型对象的属性来自本身而不是子类，上转型对象不能访问子类的新属性===============");
         System.out.println(c.a+" "+c.b+" "+c.d+" "+c.newf);
         System.out.println(p.a+" "+p.b+" "+p.d);
     }
