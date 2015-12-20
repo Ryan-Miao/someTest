@@ -38,7 +38,7 @@ public class TestDataType {
      * 
     * @Title: currentTimeMillis 
     * @Description: 测试时间类型毫秒
-    * @param     设定文件 
+    * @param
     * @return void    返回1970后经过的当前的毫秒
     * @throws
      */
@@ -69,7 +69,7 @@ public class TestDataType {
     /**
     * @Title: doubleToInt 
     * @Description: 双精度强转为int会舍弃小数
-    * @param     参数
+    * @param
     * @return void    返回类型
      */
 
