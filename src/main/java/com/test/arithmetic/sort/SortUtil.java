@@ -45,7 +45,7 @@ public class SortUtil {
                 if(less(temp,a[j])){//if ai < aj
                     //大的j右移动
                     a[flag] = a[j];
-                    flag=j;//标记ai所处于的位置
+                    flag=j;//标记ai所处于的位置---也可折半查找位置插入
                 }
             }
             a[flag]=temp;
@@ -61,12 +61,10 @@ public class SortUtil {
             h = 3*h+1;//1 4 13 40 121 364 1093
         while(h>=1){
             for (int i = h; i < N; i++) {
-                //TO-DO
-                System.out.println(h);
                 //将a[i]插入到a[i-h] a[i-2*h] a[i-3*h]..
                 for (int j = i; j>=h && less(a[j],a[j-h]); j-=h) {
                     exch(a,j,j-h);
-
+                    show(a);
                 }
             }
             h=h/3;
@@ -107,7 +105,7 @@ public class SortUtil {
     public static void main(String[] args){
         SortUtil u = new SortUtil();
 //        Integer a[] = {3,2,1,2,46,7,8,2,1};
-        String[] a = {};
+        String[] a = {"a","b","w","a","y","q","r","b","l","h","g","s","p","o","i","y","t","r","e","w","q"};
         show(a);
         System.out.println(isSorted(a));
 //        u.chooseSort(a);
