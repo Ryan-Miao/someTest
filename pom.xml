@@ -20,11 +20,10 @@
       <com.jfinal.version>2.0</com.jfinal.version>
       <com.jfinal.jetty-server.version>8.1.8</com.jfinal.jetty-server.version>
       <com.alibaba.druid.version>1.0.15</com.alibaba.druid.version>
-      <httpclient.version>4.5.1</httpclient.version>
+      <httpclient.version>4.3.3</httpclient.version>
       
       
   </properties>
-
 
 	<dependencies>
 		<dependency>
@@ -44,7 +43,11 @@
             <version>${commons-lang.version}</version>
         </dependency>
 		<!--环信  -->
-
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.7.0-rc1</version>
+		</dependency>
 		<!-- httpclient -->
 		<dependency>
 		  <groupId>org.apache.httpcomponents</groupId>
@@ -98,6 +101,11 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>${com.alibaba.druid.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
 		</dependency>
 	</dependencies>
 	

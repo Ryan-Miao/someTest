@@ -6,8 +6,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 /**
  * Created by Administrator on 2015/11/16.
@@ -30,7 +32,16 @@ public class ClientConnectionRelease {
                 if(entity!=null){
                     InputStream instream = entity.getContent();
                     try {
-                        instream.read();
+                        StringBuffer sb = new StringBuffer();
+                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(instream));
+                        String line =null;
+                        while((line=bufferedReader.readLine())!=null){
+                            sb.append(line);
+                        }
+                        instream.close();
+                        System.out.println("===================================");
+                        System.out.println(sb.toString());
+                        System.out.println("===================================");
                         //do something useful with the response
                     }catch (IOException ex){
                         //In case of an IOException the connection will be released

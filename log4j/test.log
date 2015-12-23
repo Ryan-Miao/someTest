@@ -3640,3 +3640,1053 @@ java.net.SocketException: Software caused connection abort: recv failed
 
 2015-11-16 13:51:13
 [DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAddCookies.process()]: CookieSpec selected: default
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAuthCache.process()]: Auth cache not set in the context
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection()]: Connection request: [route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection()]: Connection leased: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Opening connection {}->http://172.20.0.141:8041
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connecting to /172.20.0.141:8041
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connection established 192.168.0.141:5650<->172.20.0.141:8041
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Executing request GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Target auth state: UNCHALLENGED
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Proxy auth state: UNCHALLENGED
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Host: 172.20.0.141:8041
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Connection: Keep-Alive
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Accept-Encoding: gzip,deflate
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Host: 172.20.0.141:8041[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Access-Control-Allow-Methods: POST, PUT, OPTIONS[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Date: Tue, 01 Dec 2015 05:49:51 GMT[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "244[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "{"flag":1,"token":{"timestamp":1448948991238,"signature":"d23d2543ec7f82414f69ade7c4131254"},"picDomain":"http:\/\/172.20.0.141:8042","user":{"sex":1,"constellation":"0","birth":"1992-02-03","updatetime":"2015-11-20 19:36:56","im_password":"442068","tel":"123","img":"","house":0,"password":"abc","city":"130400","id":10,"createtime":"2015-11-17 18:56:56","height":180,"income":"0","name":"[0xe4][0xb8][0xad][0xe6][0x96][0x87][0xe7][0x9a][0x84]","province":"130000","monologue":"","district":"[0xe6][0xb2][0xb3][0xe5][0x8c][0x97][0xe7][0x9c][0x81] [0xe9][0x82][0xaf][0xe9][0x83][0xb8][0xe5][0xb8][0x82]","qq":"","icon":"","im_username":"123_wed","isrecommend":1,"marriage":0,"degree":0,"county":"130481","isvip":0}}[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << HTTP/1.1 200 OK
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Server: Apache-Coyote/1.1
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Access-Control-Allow-Methods: POST, PUT, OPTIONS
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Pragma: no-cache
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Cache-Control: no-cache
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Transfer-Encoding: chunked
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Date: Tue, 01 Dec 2015 05:49:51 GMT
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Connection can be kept alive indefinitely
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "0[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection [id: 0][route: {}->http://172.20.0.141:8041] can be kept alive indefinitely
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection released: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager is shutting down
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close()]: http-outgoing-0: Close connection
+
+2015-12-01 13:49:52
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAddCookies.process()]: CookieSpec selected: default
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAuthCache.process()]: Auth cache not set in the context
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection()]: Connection request: [route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection()]: Connection leased: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Opening connection {}->http://172.20.0.141:8041
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connecting to /172.20.0.141:8041
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connection established 192.168.0.141:5969<->172.20.0.141:8041
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Executing request GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Target auth state: UNCHALLENGED
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Proxy auth state: UNCHALLENGED
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Host: 172.20.0.141:8041
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Connection: Keep-Alive
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Accept-Encoding: gzip,deflate
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Host: 172.20.0.141:8041[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Access-Control-Allow-Methods: POST, PUT, OPTIONS[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Date: Tue, 01 Dec 2015 06:00:36 GMT[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "244[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "{"flag":1,"token":{"timestamp":1448949636469,"signature":"02d01cb36e034dc335d38c60df717aca"},"picDomain":"http:\/\/172.20.0.141:8042","user":{"sex":1,"constellation":"0","birth":"1992-02-03","updatetime":"2015-11-20 19:36:56","im_password":"442068","tel":"123","img":"","house":0,"password":"abc","city":"130400","id":10,"createtime":"2015-11-17 18:56:56","height":180,"income":"0","name":"[0xe4][0xb8][0xad][0xe6][0x96][0x87][0xe7][0x9a][0x84]","province":"130000","monologue":"","district":"[0xe6][0xb2][0xb3][0xe5][0x8c][0x97][0xe7][0x9c][0x81] [0xe9][0x82][0xaf][0xe9][0x83][0xb8][0xe5][0xb8][0x82]","qq":"","icon":"","im_username":"123_wed","isrecommend":1,"marriage":0,"degree":0,"county":"130481","isvip":0}}[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << HTTP/1.1 200 OK
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Server: Apache-Coyote/1.1
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Access-Control-Allow-Methods: POST, PUT, OPTIONS
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Pragma: no-cache
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Cache-Control: no-cache
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Transfer-Encoding: chunked
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Date: Tue, 01 Dec 2015 06:00:36 GMT
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Connection can be kept alive indefinitely
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "0[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection [id: 0][route: {}->http://172.20.0.141:8041] can be kept alive indefinitely
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection released: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager is shutting down
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close()]: http-outgoing-0: Close connection
+
+2015-12-01 14:00:37
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAddCookies.process()]: CookieSpec selected: default
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAuthCache.process()]: Auth cache not set in the context
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection()]: Connection request: [route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection()]: Connection leased: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Opening connection {}->http://172.20.0.141:8041
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connecting to /172.20.0.141:8041
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connection established 192.168.0.141:5973<->172.20.0.141:8041
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Executing request GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Target auth state: UNCHALLENGED
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Proxy auth state: UNCHALLENGED
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Host: 172.20.0.141:8041
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Connection: Keep-Alive
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Accept-Encoding: gzip,deflate
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Host: 172.20.0.141:8041[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Access-Control-Allow-Methods: POST, PUT, OPTIONS[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Date: Tue, 01 Dec 2015 06:00:53 GMT[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "244[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "{"flag":1,"token":{"timestamp":1448949653307,"signature":"29f2eaca692dfdfabe5619b19f74b318"},"picDomain":"http:\/\/172.20.0.141:8042","user":{"sex":1,"constellation":"0","birth":"1992-02-03","updatetime":"2015-11-20 19:36:56","im_password":"442068","tel":"123","img":"","house":0,"password":"abc","city":"130400","id":10,"createtime":"2015-11-17 18:56:56","height":180,"income":"0","name":"[0xe4][0xb8][0xad][0xe6][0x96][0x87][0xe7][0x9a][0x84]","province":"130000","monologue":"","district":"[0xe6][0xb2][0xb3][0xe5][0x8c][0x97][0xe7][0x9c][0x81] [0xe9][0x82][0xaf][0xe9][0x83][0xb8][0xe5][0xb8][0x82]","qq":"","icon":"","im_username":"123_wed","isrecommend":1,"marriage":0,"degree":0,"county":"130481","isvip":0}}[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << HTTP/1.1 200 OK
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Server: Apache-Coyote/1.1
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Access-Control-Allow-Methods: POST, PUT, OPTIONS
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Pragma: no-cache
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Cache-Control: no-cache
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Transfer-Encoding: chunked
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Date: Tue, 01 Dec 2015 06:00:53 GMT
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Connection can be kept alive indefinitely
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "0[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection [id: 0][route: {}->http://172.20.0.141:8041] can be kept alive indefinitely
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection released: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager is shutting down
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close()]: http-outgoing-0: Close connection
+
+2015-12-01 14:00:54
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAddCookies.process()]: CookieSpec selected: default
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAuthCache.process()]: Auth cache not set in the context
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection()]: Connection request: [route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection()]: Connection leased: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Opening connection {}->http://172.20.0.141:8041
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connecting to /172.20.0.141:8041
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connection established 192.168.0.141:6050<->172.20.0.141:8041
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Executing request GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Target auth state: UNCHALLENGED
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Proxy auth state: UNCHALLENGED
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Host: 172.20.0.141:8041
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Connection: Keep-Alive
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Accept-Encoding: gzip,deflate
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Host: 172.20.0.141:8041[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Access-Control-Allow-Methods: POST, PUT, OPTIONS[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Date: Tue, 01 Dec 2015 06:07:40 GMT[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "244[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "{"flag":1,"token":{"timestamp":1448950060333,"signature":"a31d08e2bb59829c479fff389ff37a41"},"picDomain":"http:\/\/172.20.0.141:8042","user":{"sex":1,"constellation":"0","birth":"1992-02-03","updatetime":"2015-11-20 19:36:56","im_password":"442068","tel":"123","img":"","house":0,"password":"abc","city":"130400","id":10,"createtime":"2015-11-17 18:56:56","height":180,"income":"0","name":"[0xe4][0xb8][0xad][0xe6][0x96][0x87][0xe7][0x9a][0x84]","province":"130000","monologue":"","district":"[0xe6][0xb2][0xb3][0xe5][0x8c][0x97][0xe7][0x9c][0x81] [0xe9][0x82][0xaf][0xe9][0x83][0xb8][0xe5][0xb8][0x82]","qq":"","icon":"","im_username":"123_wed","isrecommend":1,"marriage":0,"degree":0,"county":"130481","isvip":0}}[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << HTTP/1.1 200 OK
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Server: Apache-Coyote/1.1
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Access-Control-Allow-Methods: POST, PUT, OPTIONS
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Pragma: no-cache
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Cache-Control: no-cache
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Transfer-Encoding: chunked
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Date: Tue, 01 Dec 2015 06:07:40 GMT
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Connection can be kept alive indefinitely
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "0[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection [id: 0][route: {}->http://172.20.0.141:8041] can be kept alive indefinitely
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection released: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager is shutting down
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close()]: http-outgoing-0: Close connection
+
+2015-12-01 14:07:41
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAddCookies.process()]: CookieSpec selected: default
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAuthCache.process()]: Auth cache not set in the context
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection()]: Connection request: [route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection()]: Connection leased: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Opening connection {}->http://172.20.0.141:8041
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connecting to /172.20.0.141:8041
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connection established 192.168.0.141:6095<->172.20.0.141:8041
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Executing request GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Target auth state: UNCHALLENGED
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Proxy auth state: UNCHALLENGED
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Host: 172.20.0.141:8041
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Connection: Keep-Alive
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Accept-Encoding: gzip,deflate
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Host: 172.20.0.141:8041[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Access-Control-Allow-Methods: POST, PUT, OPTIONS[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Date: Tue, 01 Dec 2015 06:10:57 GMT[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "244[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "{"flag":1,"token":{"timestamp":1448950257336,"signature":"f4a20dab732c2a48ce12b079f0e4de77"},"picDomain":"http:\/\/172.20.0.141:8042","user":{"sex":1,"constellation":"0","birth":"1992-02-03","updatetime":"2015-11-20 19:36:56","im_password":"442068","tel":"123","img":"","house":0,"password":"abc","city":"130400","id":10,"createtime":"2015-11-17 18:56:56","height":180,"income":"0","name":"[0xe4][0xb8][0xad][0xe6][0x96][0x87][0xe7][0x9a][0x84]","province":"130000","monologue":"","district":"[0xe6][0xb2][0xb3][0xe5][0x8c][0x97][0xe7][0x9c][0x81] [0xe9][0x82][0xaf][0xe9][0x83][0xb8][0xe5][0xb8][0x82]","qq":"","icon":"","im_username":"123_wed","isrecommend":1,"marriage":0,"degree":0,"county":"130481","isvip":0}}[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << HTTP/1.1 200 OK
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Server: Apache-Coyote/1.1
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Access-Control-Allow-Methods: POST, PUT, OPTIONS
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Pragma: no-cache
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Cache-Control: no-cache
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Transfer-Encoding: chunked
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Date: Tue, 01 Dec 2015 06:10:57 GMT
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Connection can be kept alive indefinitely
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "0[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection [id: 0][route: {}->http://172.20.0.141:8041] can be kept alive indefinitely
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection released: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager is shutting down
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close()]: http-outgoing-0: Close connection
+
+2015-12-01 14:10:58
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAddCookies.process()]: CookieSpec selected: default
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAuthCache.process()]: Auth cache not set in the context
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection()]: Connection request: [route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection()]: Connection leased: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Opening connection {}->http://172.20.0.141:8041
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connecting to /172.20.0.141:8041
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connection established 192.168.0.141:6101<->172.20.0.141:8041
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Executing request GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Target auth state: UNCHALLENGED
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Proxy auth state: UNCHALLENGED
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Host: 172.20.0.141:8041
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Connection: Keep-Alive
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Accept-Encoding: gzip,deflate
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Host: 172.20.0.141:8041[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Access-Control-Allow-Methods: POST, PUT, OPTIONS[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Date: Tue, 01 Dec 2015 06:11:17 GMT[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "244[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "{"flag":1,"token":{"timestamp":1448950277851,"signature":"8a98dc43582d32c2c5910d3201ac2761"},"picDomain":"http:\/\/172.20.0.141:8042","user":{"sex":1,"constellation":"0","birth":"1992-02-03","updatetime":"2015-11-20 19:36:56","im_password":"442068","tel":"123","img":"","house":0,"password":"abc","city":"130400","id":10,"createtime":"2015-11-17 18:56:56","height":180,"income":"0","name":"[0xe4][0xb8][0xad][0xe6][0x96][0x87][0xe7][0x9a][0x84]","province":"130000","monologue":"","district":"[0xe6][0xb2][0xb3][0xe5][0x8c][0x97][0xe7][0x9c][0x81] [0xe9][0x82][0xaf][0xe9][0x83][0xb8][0xe5][0xb8][0x82]","qq":"","icon":"","im_username":"123_wed","isrecommend":1,"marriage":0,"degree":0,"county":"130481","isvip":0}}[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << HTTP/1.1 200 OK
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Server: Apache-Coyote/1.1
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Access-Control-Allow-Methods: POST, PUT, OPTIONS
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Pragma: no-cache
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Cache-Control: no-cache
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Transfer-Encoding: chunked
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Date: Tue, 01 Dec 2015 06:11:17 GMT
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Connection can be kept alive indefinitely
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "0[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection [id: 0][route: {}->http://172.20.0.141:8041] can be kept alive indefinitely
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection released: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager is shutting down
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close()]: http-outgoing-0: Close connection
+
+2015-12-01 14:11:18
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAddCookies.process()]: CookieSpec selected: default
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.client.protocol.RequestAuthCache.process()]: Auth cache not set in the context
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection()]: Connection request: [route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection()]: Connection leased: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Opening connection {}->http://172.20.0.141:8041
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connecting to /172.20.0.141:8041
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect()]: Connection established 192.168.0.141:6112<->172.20.0.141:8041
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Executing request GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Target auth state: UNCHALLENGED
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Proxy auth state: UNCHALLENGED
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Host: 172.20.0.141:8041
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Connection: Keep-Alive
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onRequestSubmitted()]: http-outgoing-0 >> Accept-Encoding: gzip,deflate
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "GET /app/login/loginByPass?tel=123&password=abc HTTP/1.1[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Host: 172.20.0.141:8041[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.7.0_80)[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 >> "[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Access-Control-Allow-Methods: POST, PUT, OPTIONS[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "Date: Tue, 01 Dec 2015 06:12:29 GMT[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "244[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "{"flag":1,"token":{"timestamp":1448950349993,"signature":"a8ef986e4a6012c538cef909c4231e6c"},"picDomain":"http:\/\/172.20.0.141:8042","user":{"sex":1,"constellation":"0","birth":"1992-02-03","updatetime":"2015-11-20 19:36:56","im_password":"442068","tel":"123","img":"","house":0,"password":"abc","city":"130400","id":10,"createtime":"2015-11-17 18:56:56","height":180,"income":"0","name":"[0xe4][0xb8][0xad][0xe6][0x96][0x87][0xe7][0x9a][0x84]","province":"130000","monologue":"","district":"[0xe6][0xb2][0xb3][0xe5][0x8c][0x97][0xe7][0x9c][0x81] [0xe9][0x82][0xaf][0xe9][0x83][0xb8][0xe5][0xb8][0x82]","qq":"","icon":"","im_username":"123_wed","isrecommend":1,"marriage":0,"degree":0,"county":"130481","isvip":0}}[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << HTTP/1.1 200 OK
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Server: Apache-Coyote/1.1
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Access-Control-Allow-Methods: POST, PUT, OPTIONS
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Pragma: no-cache
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Cache-Control: no-cache
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Transfer-Encoding: chunked
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.onResponseReceived()]: http-outgoing-0 << Date: Tue, 01 Dec 2015 06:12:29 GMT
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.execchain.MainClientExec.execute()]: Connection can be kept alive indefinitely
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "0[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.Wire.wire()]: http-outgoing-0 << "[\r][\n]"
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection [id: 0][route: {}->http://172.20.0.141:8041] can be kept alive indefinitely
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.releaseConnection()]: Connection released: [id: 0][route: {}->http://172.20.0.141:8041][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager is shutting down
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close()]: http-outgoing-0: Close connection
+
+2015-12-01 14:12:30
+[DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
