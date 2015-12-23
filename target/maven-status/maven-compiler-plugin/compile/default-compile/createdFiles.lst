@@ -2,6 +2,7 @@ com\test\connectDb\SysZone.class
 com\test\arithmetic\InputBinary.class
 com\test\reflect\TestUpdate.class
 com\test\util\PicUtil$UploadFolder$3.class
+com\test\reflect\DynamicProxy2.class
 com\test\java\TestMap.class
 com\test\geohash\Geohash.class
 com\test\jsoup\JsoupProviceTest.class
@@ -10,12 +11,15 @@ com\test\reflect\FruitFactory.class
 com\test\util\FileUtil.class
 com\test\connectDb\TestConDataBase.class
 com\test\java\TestThread.class
+com\test\reflect\Subject2.class
 com\test\reflect\Fruit.class
 com\test\reflect\TestReflect.class
 com\test\reflect\FactoryRefact.class
 com\test\java\TestRead.class
+com\test\reflect\RealSubject2.class
 com\test\reflect\B.class
 com\test\connectDb\Zone.class
+com\test\java\Country.class
 com\test\java\TestDataType.class
 com\test\reflect\Orange.class
 com\test\reflect\FruitFactoryByReflect.class
@@ -27,6 +31,7 @@ com\test\log\TestLog4j.class
 com\test\http\httpclient\ClientConnectionRelease.class
 com\test\java\TestDate.class
 com\test\util\PicUtil.class
+com\test\java\TestRef.class
 com\test\reflect\PropertyInit.class
 com\test\jsoup\JsoupTest.class
 com\test\xml\TestDom.class
@@ -42,6 +47,7 @@ com\test\reflect\ObjectCopy.class
 com\test\reflect\DynamicProxy.class
 com\test\java\TestMath.class
 com\test\util\PicUtil$UploadFolder$1.class
+com\test\reflect\ProxySubject.class
 com\test\util\Token.class
 com\test\util\Geohash.class
 com\test\java\Game.class
