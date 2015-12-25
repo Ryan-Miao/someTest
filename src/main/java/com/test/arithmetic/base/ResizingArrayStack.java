@@ -7,7 +7,7 @@ import java.util.Iterator;
  * 算法第四版 第一章 下压栈（lifo）
  * 能够动态调整数组大小的实现
  */
-public class ResizingArrayStack<Item> implements Iterator<Item>{
+public class ResizingArrayStack<Item> implements Iterable<Item>{
 
     private Item[] a = (Item[]) new Object[1];//栈元素
     private int N = 0;//元素数量
@@ -35,22 +35,6 @@ public class ResizingArrayStack<Item> implements Iterator<Item>{
     public Iterator<Item> iterator(){
         return new ReverseArrayIterator();
     }
-
-    @Override
-    public boolean hasNext() {
-        return N>0;
-    }
-
-    @Override
-    public Item next() {
-        return a[--N];
-    }
-
-    @Override
-    public void remove() {
-
-    }
-
 
     private class ReverseArrayIterator implements Iterator<Item> {
         private int i = N;
