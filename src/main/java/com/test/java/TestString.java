@@ -1,5 +1,8 @@
 package com.test.java;
 
+import org.junit.Test;
+
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 /**
@@ -109,6 +112,56 @@ public class TestString {
 		}
 
 	}
+
+    @Test
+    public void getEncod() throws UnsupportedEncodingException {
+        String sysencod = System.getProperty("file.encoding");
+        System.out.println("系统默认编码："+sysencod);
+        String str = "中文123abc";
+        System.out.println("字符实例："+str);
+        System.out.println("===============getbytes无参:===============");
+        byte[] bytes = str.getBytes();
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes,"iso-8859-1"));
+
+
+        System.out.println("===============getbytes(utf-8):===============");
+        byte[] bytes2 = str.getBytes("utf-8");
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes2));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes2,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes2,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes2,"iso-8859-1"));
+        System.out.println("===============getbytes(gbk):===============");
+        byte[] bytes3 = str.getBytes("gbk");
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes3));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes3,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes3,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes3,"iso-8859-1"));
+        System.out.println("===============getbytes(iso-8859-1):===============");
+        byte[] bytes4 = str.getBytes("iso-8859-1");
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes4));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes4,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes4,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes4,"iso-8859-1"));
+    }
 
 
 	public static void main(String[] args) {
