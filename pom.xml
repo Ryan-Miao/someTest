@@ -24,17 +24,6 @@
       
       
   </properties>
-   <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.glassfish.jersey</groupId>
-                <artifactId>jersey-bom</artifactId>
-                <type>pom</type>
-                <scope>import</scope>
-                <version>2.15</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -54,19 +43,11 @@
             <version>${commons-lang.version}</version>
         </dependency>
 		<!--环信  -->
-		<!-- jersey -->
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-multipart</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.7.0-rc1</version>
+		</dependency>
 		<!-- httpclient -->
 		<dependency>
 		  <groupId>org.apache.httpcomponents</groupId>
