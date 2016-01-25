@@ -32,7 +32,6 @@
           <element id="library" level="project" name="Maven: cglib:cglib-nodep:3.1" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.20" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.15" />
-          <element id="library" level="module" name="JUnit4" module-name="SomeTest" />
         </element>
       </element>
       <element id="directory" name="META-INF">
