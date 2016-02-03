@@ -9,6 +9,8 @@ import java.util.*;
 public class TestLinkedList {
 
     public static void main(String[] args) {
+        List<String> tlist = new ArrayList<>();
+        tlist.size();
         TestLinkedList t = new TestLinkedList();
         LinkedList<String> list = new LinkedList<>();
         for (int i = 0; i < 12; i++) {

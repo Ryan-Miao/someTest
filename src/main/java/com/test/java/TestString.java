@@ -164,6 +164,41 @@ public class TestString {
     }
 
 
+    @Test
+    public void testSplit(){
+        String str = "asdf:12:";
+        String[] strarr = str.split(":",-1);
+        System.out.println("arr length:"+strarr.length);
+        for (int i = 0; i < strarr.length; i++) {
+            System.out.println(strarr[i]);
+        }
+
+        System.out.println("==========分界线=============");
+        String str2 = "";
+        String[] arr = str2.split(",", -1);
+        System.out.println("数组长度："+arr.length);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+        System.out.println("==========结束============");
+        String msg = "57:123;55:123;56:213-123;123|57:123123;55:123123;56:213123-123123;123123";
+        String[] msgarr = msg.split("\\|");
+        System.out.println(msgarr.length);
+        for (int i = 0; i < msgarr.length; i++) {
+            System.out.println(msgarr[i]);
+        }
+        System.out.println("=------------------------------------------------------=");
+        String tarr = "";
+        System.out.println(tarr.split(";").length);
+        System.out.println("结果：|"+tarr.split(";")[0]+"||");
+        System.out.println("=------------------------------------------------------=");
+        StringBuffer sb = new StringBuffer();
+        sb.append("");
+        System.out.println(sb.length());
+
+
+    }
+
 	public static void main(String[] args) {
 		for (int i = 'a'; i <= 'z'; i++) {
 			System.out.println(i - 96 + "====" + (char) i);
