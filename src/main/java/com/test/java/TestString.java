@@ -167,6 +167,7 @@ public class TestString {
     @Test
     public void testSplit(){
         String str = "asdf:12:";
+        str.split("2");
         String[] strarr = str.split(":",-1);
         System.out.println("arr length:"+strarr.length);
         for (int i = 0; i < strarr.length; i++) {
@@ -175,7 +176,7 @@ public class TestString {
 
         System.out.println("==========分界线=============");
         String str2 = "";
-        String[] arr = str2.split(",", -1);
+        String[] arr = str2.split(",");
         System.out.println("数组长度："+arr.length);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
