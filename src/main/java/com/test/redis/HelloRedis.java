@@ -23,24 +23,58 @@ public class HelloRedis {
     }
 
     /**
+     * 一些操作
+     */
+    @Test
+    public void testOption(){
+        String s = jedis.flushDB();
+        System.out.println("清空后："+s);
+
+        System.out.println(jedis.echo("foo"));
+
+        jedis.set("foo","存储变量foo");
+        Boolean is = jedis.exists("foo");
+        System.out.println("foo是否存在："+is);
+
+        Set<String> keys = jedis.keys("*");
+        System.out.println("数据库中所有的keys:"+keys);
+
+        Set<String> keys1 = jedis.keys("miao_*");
+        System.out.println("数据库中以 miao_ 为前缀的keys"+keys1);
+
+        String foo = jedis.type("foo");
+        System.out.println("foo的类型："+foo);
+    }
+
+    /**
      * jedis存储字符串
      */
     @Test
     public void testString(){
+        jedis.flushDB();
         //--添加数据--
         jedis.set("name","miao");
-        System.out.println(jedis.get("name"));
+        System.out.println("取出name:"+jedis.get("name"));
+
+        //取出元数据，并修改
+        String name = jedis.getSet("name", "被取出后修改");
+        System.out.println("取出："+name+" 修改："+jedis.get("name"));
+        String name1 = jedis.getrange("name", 0,5 );
+        System.out.println("获取value值并截取（中文容易乱码）："+name1);
+        //--覆盖--
+        jedis.set("name","覆盖了");
+        System.out.println("取出重设置后的name:"+jedis.get("name"));
         //拼接
         jedis.append("name"," be stronger!");
-        System.out.println(jedis.get("name"));
+        System.out.println("拼接后的name:"+jedis.get("name"));
 
         jedis.del("name");
-        System.out.println(jedis.get("name"));
+        System.out.println("删除后的name:"+jedis.get("name"));
         //设置多个
         jedis.mset("name","miao","age","25","birth","1991-02-22");
         jedis.incr("age");//+1
         System.out.println(jedis.get("name")+"-"+jedis.get("age")+"-"+jedis.get("birth"));
-        jedis.del("name","age","birht");
+        jedis.del("name","age","birth");
     }
 
     /**
@@ -48,6 +82,7 @@ public class HelloRedis {
      */
     @Test
     public void testMap(){
+        jedis.flushDB();
         //--添加数据--
         Map<String,String> map = new HashMap<>();
         map.put("name","miao");
@@ -81,6 +116,7 @@ public class HelloRedis {
      */
     @Test
     public void testList(){
+        jedis.flushDB();
         //查看
         List<String> users = jedis.lrange("users", 0, -1);
         System.out.println("list:"+users);
@@ -93,6 +129,27 @@ public class HelloRedis {
         jedis.rpush("users","hong");
         jedis.rpush("users","xing");
         System.out.println("（注意顺序）插入的结果："+jedis.lrange("users",0,-1));
+        //长度
+        Long len = jedis.llen("users");
+        System.out.println("list长度："+len);
+        //子串
+        System.out.println("取出索引0到1的数据："+jedis.lrange("users",0,1));
+        //修改单个值
+        jedis.lset("users",0,"我变成第一个");
+        System.out.println("修改单个值后："+jedis.lrange("users",0,-1));
+        //获取指定下标的值
+        String users1 = jedis.lindex("users", 0);
+        System.out.println("下标0为："+users1);
+        //删除指定下标的值
+        Long lrem = jedis.lrem("users", 0,"我变成第一个");
+        System.out.println("删除下标0结果："+lrem+"   |"+jedis.lrange("users",0,-1));
+        //删除区间之外的值
+//        jedis.ltrim("users",1,2);
+        //出栈
+        String users2 = jedis.lpop("users");
+        System.out.println("左出栈："+users2+"  |"+jedis.lrange("users",0,-1));
+        String users3 = jedis.rpop("users");
+        System.out.println("右出栈："+users3+"  |"+jedis.lrange("users",0,-1));
 
         jedis.del("users");
         System.out.println(jedis.lrange("users",0,-1));
