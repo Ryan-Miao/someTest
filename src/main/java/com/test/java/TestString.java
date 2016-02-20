@@ -1,5 +1,8 @@
 package com.test.java;
 
+import org.junit.Test;
+
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 /**
@@ -110,6 +113,92 @@ public class TestString {
 
 	}
 
+    @Test
+    public void getEncod() throws UnsupportedEncodingException {
+        String sysencod = System.getProperty("file.encoding");
+        System.out.println("系统默认编码："+sysencod);
+        String str = "中文123abc";
+        System.out.println("字符实例："+str);
+        System.out.println("===============getbytes无参:===============");
+        byte[] bytes = str.getBytes();
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes,"iso-8859-1"));
+
+
+        System.out.println("===============getbytes(utf-8):===============");
+        byte[] bytes2 = str.getBytes("utf-8");
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes2));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes2,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes2,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes2,"iso-8859-1"));
+        System.out.println("===============getbytes(gbk):===============");
+        byte[] bytes3 = str.getBytes("gbk");
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes3));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes3,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes3,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes3,"iso-8859-1"));
+        System.out.println("===============getbytes(iso-8859-1):===============");
+        byte[] bytes4 = str.getBytes("iso-8859-1");
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i]);
+        }
+        System.out.println();
+        System.out.println("通过默认字符集，将字符数组解码为字符："+new String(bytes4));
+        System.out.println("通过utf-8字符集，将字符数组解码为字符："+new String(bytes4,"utf-8"));
+        System.out.println("通过gbk字符集，将字符数组解码为字符："+new String(bytes4,"gbk"));
+        System.out.println("通过iso-8859-1字符集，将字符数组解码为字符："+new String(bytes4,"iso-8859-1"));
+    }
+
+
+    @Test
+    public void testSplit(){
+        String str = "asdf:12:";
+        str.split("2");
+        String[] strarr = str.split(":",-1);
+        System.out.println("arr length:"+strarr.length);
+        for (int i = 0; i < strarr.length; i++) {
+            System.out.println(strarr[i]);
+        }
+
+        System.out.println("==========分界线=============");
+        String str2 = "";
+        String[] arr = str2.split(",");
+        System.out.println("数组长度："+arr.length);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+        System.out.println("==========结束============");
+        String msg = "57:123;55:123;56:213-123;123|57:123123;55:123123;56:213123-123123;123123";
+        String[] msgarr = msg.split("\\|");
+        System.out.println(msgarr.length);
+        for (int i = 0; i < msgarr.length; i++) {
+            System.out.println(msgarr[i]);
+        }
+        System.out.println("=------------------------------------------------------=");
+        String tarr = "";
+        System.out.println(tarr.split(";").length);
+        System.out.println("结果：|"+tarr.split(";")[0]+"||");
+        System.out.println("=------------------------------------------------------=");
+        StringBuffer sb = new StringBuffer();
+        sb.append("");
+        System.out.println(sb.length());
+
+
+    }
 
 	public static void main(String[] args) {
 		for (int i = 'a'; i <= 'z'; i++) {

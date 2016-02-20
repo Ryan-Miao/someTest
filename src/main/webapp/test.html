@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>测试js</title>
+    <script src="js/jquery/jquery-1.12.0.js"></script>
 </head>
 <body>
+
+<input type="text" id="t1" gid="" value="">
+<script>
+    function testnull(){
+        var t1 = $("#t1");
+        var gid = t1.attr("gid");
+        console.log(t1.val());
+        console.log(t1.attr("type"));
+        console.log(t1.attr("id"));
+
+
+        if(gid){//!=0 !=undefiend !=null
+            console.log("gid有值");
+            console.log(gid);
+        }else{
+            console.log("if(gid)中，gid解析为false，即没有值;下面为其赋值为123 ");
+            t1.attr("gid",123);
+        }
+    }
+</script>
+
+
+<div><span>
+<button class="ac" id="btn" myattr="abc" onclick="test(this)">确定</button>
+    </span></div>
+<script>
+function test(ele){
+  console.log(ele);
+  console.log(ele.class);
+  console.log(ele.id);
+  console.log(ele.myattr);
+
+    console.log($(ele))
+    console.log($(ele).val())
+    console.log($(ele).attr("id"))
+    console.log($(ele).attr("myattr"))
+    $(ele).parent().remove();
+}
+</script>
+
+
 
 </body>
 </html>
