@@ -27,6 +27,8 @@ public class HelloRedis {
      */
     @Test
     public void testOption(){
+        //查看redis是否运行
+        System.out.println(jedis.ping());
         String s = jedis.flushDB();
         System.out.println("清空后："+s);
 
@@ -39,11 +41,13 @@ public class HelloRedis {
         Set<String> keys = jedis.keys("*");
         System.out.println("数据库中所有的keys:"+keys);
 
-        Set<String> keys1 = jedis.keys("miao_*");
-        System.out.println("数据库中以 miao_ 为前缀的keys"+keys1);
+        Set<String> keys1 = jedis.keys("f*");
+        System.out.println("数据库中以 f 为前缀的keys"+keys1);
 
         String foo = jedis.type("foo");
         System.out.println("foo的类型："+foo);
+
+        jedis.del("foo");
     }
 
     /**
@@ -186,6 +190,24 @@ public class HelloRedis {
 
         jedis.del("user");
 
+    }
+
+    /**
+     * zset
+     * 有序的set
+     */
+    @Test
+    public void testZset(){
+        jedis.flushDB();
+        //添加
+        jedis.zadd("zkey",12.1,"十二");
+        jedis.zadd("zkey",11.1,"11");
+        jedis.zadd("zkey",21.1,"20");
+        jedis.zadd("zkey",41.1,"41");
+        jedis.zadd("zkey",4,"4");
+        //查看
+        Set<String> zkey = jedis.zrange("zkey", 0, -1);
+        System.out.println("可以看到是以score排序的："+zkey);
     }
 
     /**
