@@ -1,5 +1,6 @@
 package com.test.redis;
 
+import org.junit.Before;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 
@@ -15,7 +16,13 @@ import java.util.Set;
 public class HelloRedis {
     private static final Jedis jedis = new Jedis("127.0.0.1",6379);
 
+    @Before
+    public void setUp(){
+        jedis.auth("admin123");
+    }
+
     public static void main(String[] args) {
+        jedis.auth("admin123");
         jedis.set("test","Hello Redis");
         String test = jedis.get("test");
         System.out.println(test);
@@ -227,7 +234,6 @@ public class HelloRedis {
         System.out.println("排序："+jedis.sort("list"));
         System.out.println("排序不影响原存储："+jedis.lrange("list",0,-1));
     }
-
 
 
 }

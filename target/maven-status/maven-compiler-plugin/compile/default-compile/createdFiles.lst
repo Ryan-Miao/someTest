@@ -59,6 +59,7 @@ com\test\arithmetic\Stack_play_regular.class
 com\test\java\list\PriorityLinkedListIterator.class
 com\test\java\genericity\LinkedListStack.class
 com\test\java\TestRandom.class
+com\test\redis\RedisMore.class
 com\test\arithmetic\sort\SortUtil.class
 com\test\java\list\TestLinkedList.class
 com\test\arithmetic\CircleList.class
