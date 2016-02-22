@@ -17,6 +17,10 @@
 > 是说，经常不知不觉在master分支下修改东西。然后提交，反而dev进度落后了。这个问题肯定要改，但是问题怎么办？     
 > 好吧，解决。checkout dev -> pull -> merge master -> resolve conflict -> push   
 > 这次问题解决后养成如下习惯：在dev下开发，dev提交后，转master，先pull，再解决冲突，再merge dev,解决冲突，再push 
+
+ 4.关于merge合并的问题
+ > 后来使用idea开发，尽管添加了gitignore,但每次提交还是会提交workspace.xml,然后就是从master merge dev的时候会起冲突，这时候我会选择accepte 最先进的一个。后来干脆删除了dev。
+ 
                      
  -------------------------------------
 ## git中的read.md文件编辑语言：Markdown    
