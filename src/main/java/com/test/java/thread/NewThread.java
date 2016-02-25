@@ -1,7 +1,7 @@
 package com.test.java.thread;
 
 /**
- * 学习线程
+ * 学习线程----实现Runnable接口
  * Created by mrf on 2016/2/25.
  */
 public class NewThread  implements Runnable{
