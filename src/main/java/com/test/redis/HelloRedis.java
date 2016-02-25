@@ -27,6 +27,8 @@ public class HelloRedis {
         String test = jedis.get("test");
         System.out.println(test);
         jedis.del("test");
+
+        System.out.println(jedis.get("test"));
     }
 
     /**

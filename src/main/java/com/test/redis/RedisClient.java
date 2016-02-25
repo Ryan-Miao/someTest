@@ -50,38 +50,12 @@ public class RedisClient {
         shardedJedisPool = new ShardedJedisPool(getConfig(),shards);
     }
 
-    public void show() {
-        KeyOperate();
-        StringOperate();
-        ListOperate();
-        SetOperate();
-        SortedSetOperate();
-        HashOperate();
-        jedisPool.returnResource(jedis);
-        shardedJedisPool.returnResource(shardedJedis);
-    }
-
-    private void HashOperate() {
-
-    }
-
-    private void SortedSetOperate() {
-
-    }
-
-    private void SetOperate() {
-
-    }
-
-    private void ListOperate() {
-
-    }
-
-    private void StringOperate() {
-
-    }
-
-    private void KeyOperate() {
+    public static void main(String[] args) {
+        RedisClient redisClient = new RedisClient();
+        Jedis jedis = redisClient.jedis;
+        String auth = jedis.auth("admin123");
+        System.out.println("auth:"+auth);
+        System.out.println(jedis.get("miao"));
 
     }
 }

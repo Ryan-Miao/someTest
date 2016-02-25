@@ -1,0 +1,90 @@
+
+2016-02-22 10:57:17
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 10:58:31
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:01:07
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:03:23
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:03:28
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:03:40
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:04:04
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:04:04
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:04:45
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:04:45
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:05:04
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:05:04
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:05:19
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:05:19
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:05:28
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:05:28
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:06:26
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:06:26
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:09:01
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:09:01
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:09:29
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:09:29
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:11:52
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:11:52
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:11:59
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:11:59
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:12:28
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:12:28
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
+
+2016-02-22 11:13:04
+[WARN]-[Thread: main]-[com.test.redis.RedisMore.bitSet()]: 111
+
+2016-02-22 11:13:04
+[ERROR]-[Thread: main]-[com.test.redis.RedisMore.afterDo()]: 测试完成
