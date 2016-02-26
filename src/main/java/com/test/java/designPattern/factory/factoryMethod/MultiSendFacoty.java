@@ -1,4 +1,4 @@
-package com.test.java.designPattern.factory;
+package com.test.java.designPattern.factory.factoryMethod;
 
 /**
  * 多个工厂模式

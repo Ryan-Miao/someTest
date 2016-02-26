@@ -1,9 +1,8 @@
 package com.test.java.designPattern.factory;
 
-import org.junit.Before;
+import com.test.java.designPattern.factory.factoryMethod.Sender;
+import com.test.java.designPattern.factory.factoryMethod.StaticSendFacoty;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by mrf on 2016/2/26.

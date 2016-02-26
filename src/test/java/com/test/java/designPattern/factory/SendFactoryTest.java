@@ -1,7 +1,7 @@
 package com.test.java.designPattern.factory;
 
-import junit.framework.TestResult;
-import junit.framework.TestSuite;
+import com.test.java.designPattern.factory.factoryMethod.SendFactory;
+import com.test.java.designPattern.factory.factoryMethod.Sender;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

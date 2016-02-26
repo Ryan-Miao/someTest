@@ -1,4 +1,4 @@
-package com.test.java.designPattern.factory;
+package com.test.java.designPattern.factory.factoryMethod;
 
 /**
  * 静态工厂模式
