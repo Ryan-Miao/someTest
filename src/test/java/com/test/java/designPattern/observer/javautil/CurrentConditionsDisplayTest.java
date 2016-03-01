@@ -4,9 +4,10 @@ import static org.junit.Assert.*;
 
 /**
  * 使用java内置观察者模式测试
+ * 测试推送数据
  * Created by mrf on 2016/3/1.
  */
-public class WeatherDataTest {
+public class CurrentConditionsDisplayTest {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
         CurrentConditionsDisplay currentDisplay =
