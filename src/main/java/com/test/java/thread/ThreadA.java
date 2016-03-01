@@ -1,6 +1,7 @@
 package com.test.java.thread;
 
 /**
+ * synchronized
  * Created by mrf on 2016/2/26.
  */
 public class ThreadA extends Thread {
