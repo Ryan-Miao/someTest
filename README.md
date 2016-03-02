@@ -2,7 +2,10 @@
 ## 本项目测试范围
 这个是我搭建第一个测试的项目，修改成了maven，本来修改springmvc的，但是有个问题没解决，放下了。springmvc的web方面的测试
 就放到dinner和springmvc这两个测试项目去。
-本项目主要测试java的基础。
+本项目主要测试java的基础。    
+
+dinner:https://github.com/chenxing12/dinner
+springmvc:https://github.com/chenxing12/springmvc
 
 ## My learning  git
 在工作中遇到一些问题，然后进行的一些测试    

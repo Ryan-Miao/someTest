@@ -1,5 +1,3 @@
 Manifest-Version: 1.0
-Build-Jdk: 1.7.0_80
-Built-By: Administrator
-Created-By: IntelliJ IDEA
+Class-Path: 
 
