@@ -18,7 +18,11 @@ public class Singleton {
     private Singleton(){
     }
 
-    /*静态工程方法，创建实例*/
+    /*静态工程方法，创建实例
+    问题：jvm创建和赋值是两个操作，不是原子的
+    a线程判断instance为null，上锁，new了一个实例，这时jvm可能先new了一个内存放进去，但并没有告诉instance准确的地址，即还没赋值。退出锁。
+    b线程进来，instance为null。重新创建。。。。因此初始化多次
+    * */
     public static  Singleton getInstance(){
         if(instance == null){
             synchronized(Singleton.class){

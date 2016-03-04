@@ -42,11 +42,12 @@ http://www.cnblogs.com/woshimrf/p/5223315.html
 学习uml画图
 
 2016.03.02
-学习css样式  
+学习css样式    
 http://www.cnblogs.com/woshimrf/p/5234941.html
 
 2016.03.03
-学习java并发编程实践
+学习java并发编程实践    
+http://www.cnblogs.com/woshimrf/p/5238827.html
 
-2016.03.03
-学习quartz
+2016.03.04
+学习java并发编程实践
