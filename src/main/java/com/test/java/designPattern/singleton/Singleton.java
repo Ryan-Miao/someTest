@@ -88,9 +88,10 @@ class Singleton2{
 
 /**
  * 安全的实现了单例
+ * 这个就是双重检查
  */
 class Singleton3{
-    private static  Singleton3 instance = null;
+    private static volatile   Singleton3 instance = null;
     public int i;
 
     private Singleton3(){
@@ -124,6 +125,27 @@ class Singleton3{
                 }
             }).start();
         }
+    }
+}
+
+/**
+ * double check
+ */
+class Singleton4{
+    private volatile static Singleton4 instance = null;
+
+    private Singleton4() {
+
+    }
+
+    public static Singleton4 getInstance() {
+        if(instance==null) {
+            synchronized (Singleton.class) {
+                if(instance==null)
+                    instance = new Singleton4();
+            }
+        }
+        return instance;
     }
 }
 
