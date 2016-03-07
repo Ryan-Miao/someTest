@@ -113,6 +113,57 @@ class DelegatingVehicleTracker{
 }
 
 /**
+ * 线程安全且可变的Point类
+ */
+@ThreadSafe
+class SafePoint{
+    @GuardedBy("this") private int x,y;
+    private SafePoint(int[] a){
+        this(a[0],a[1]);
+    }
+    public SafePoint(SafePoint p){
+        this(p.get());
+    }
+    public SafePoint(int x,int y){
+        this.x = x;
+        this.y = y;
+    }
+    public synchronized int[] get(){
+        return new int[] {x,y};
+    }
+    public synchronized void set(int x,int y){
+        this.x =x;
+        this.y = y;
+    }
+}
+
+/**
+ * 安全发布底层状态的车辆追踪器
+ */
+@ThreadSafe
+class PublishingVehicleTracker{
+    private final Map<String,SafePoint> locations;
+    private final Map<String,SafePoint> unmodifiableMap;
+
+    PublishingVehicleTracker(Map<String, SafePoint> locations, Map<String, SafePoint> unmodifiableMap) {
+        this.locations = locations;
+        this.unmodifiableMap = unmodifiableMap;
+    }
+
+    public Map<String,SafePoint> getLocations(){
+        return unmodifiableMap;
+    }
+    public SafePoint getLocation(String id){
+        return locations.get(id);
+    }
+    public void setLocation(String id,int x,int y){
+        if (!locations.containsKey(id))
+            throw new IllegalArgumentException("invalid vehicle name:"+id);
+        locations.get(id).set(x,y);
+    }
+}
+
+/**
  * 将线程安全委托给多个状态变量
  */
 class VisualComponent{
