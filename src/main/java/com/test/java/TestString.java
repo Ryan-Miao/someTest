@@ -197,7 +197,25 @@ public class TestString {
         sb.append("");
         System.out.println(sb.length());
 
+    }
 
+    /**
+     * 深入理解java虚拟机
+     * 2-7
+     * String.intern是一个native方法，作用：如果字符创常量池中已经包含一个等于此的String对象的字符串，
+     * 则返回代表池中这个字符串的String对象；否则将此String对象包含的字符串添加到 常量池中，并返回比
+     * String对象的引用
+     * jdk1.6及之前：常量池分配在永久代，itern将String字符串实例复制到永久代，并返回永久代中的引用
+     * 1.7后：itern不复制，只在常量池中记录首次出现实例的引用
+     */
+    @Test
+    public void testIntern(){
+        String str1 = new StringBuilder("计算机").append("ruanji").toString();
+        System.out.println(str1.intern() == str1);
+
+        String str2 = new StringBuilder("js").append("css").toString();
+        System.out.println(str2.intern() == str2);
+        System.out.println(str2=="jscss");
     }
 
 	public static void main(String[] args) {
