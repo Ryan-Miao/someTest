@@ -33,6 +33,7 @@ public class TestString {
         p.setAge(100);
         sb = new StringBuffer("sbsb");
         p = new Person("bb",44);
+        sb.append("123");
         return s;
     }
 
