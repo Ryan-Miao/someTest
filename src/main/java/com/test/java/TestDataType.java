@@ -1,6 +1,8 @@
 package com.test.java;
 
 
+import org.junit.Test;
+
 import java.util.Date;
 
 /**
@@ -16,6 +18,33 @@ public class TestDataType {
         //null不是整形，不能相加，晕死
 //        System.out.println(1 + Integer.parseInt(null));
     }
+
+	/**
+	 * 测试switch
+	 */
+	@Test
+	public void testSwitch(){
+		String a = "aa";
+		int b = 12;
+		char c = '2';
+		byte d = 1;
+		float e = 1.0f;
+		switch (a){
+
+		}
+		switch (b){
+
+		}
+		switch (c){
+
+		}
+		switch (d){
+
+		}
+//		switch (e){
+//
+//		}
+	}
 
     /**
      * char转ascii

@@ -1,7 +1,12 @@
 package com.test.util;
 
-import java.io.File;
-import java.io.IOException;
+import org.junit.Test;
+
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileUtil {  
     
@@ -114,6 +119,117 @@ public class FileUtil {
             System.out.println("在默认目录下创建了临时文件："  
                     + FileUtil.createTempFile(prefix, suffix, null));  
         }  
-    }  
-  
+    }
+
+    public static void fileCopy(String source,String targer) throws IOException {
+        try(InputStream in = new FileInputStream(source)) {
+            try(OutputStream out = new FileOutputStream(targer)) {
+                byte[] buffer = new byte[3096];
+                int byteToRead;
+                while((byteToRead = in.read(buffer))!=-1){
+                    out.write(buffer,0,byteToRead);
+                }
+            }
+        }
+    }
+    public static void fileCopyNIO(String source,String target) throws IOException {
+        try(FileInputStream in = new FileInputStream(source)) {
+            try(FileOutputStream out = new FileOutputStream(target)) {
+                FileChannel inChannel  = in.getChannel();
+                FileChannel outChannel = out.getChannel();
+                ByteBuffer buffer = ByteBuffer.allocate(4096);
+                while (inChannel.read(buffer)!=-1){
+                    buffer.flip();
+                    outChannel.write(buffer);
+                    buffer.clear();
+                }
+            }
+        }
+    }
+
+    /**
+     *统计给定文件中字符word的个数
+     */
+    public static int countWordInFile(String filename,String word) throws IOException {
+        int count = 0;
+        try(FileReader fr = new FileReader(filename)){
+            try(BufferedReader br = new BufferedReader(fr)){
+                String line = null;
+                while ((line = br.readLine())!=null){
+                    int index = -1;
+                    while (line.length()>=word.length() && (index=line.indexOf(word))>=0){
+                        count++;
+                        line = line.substring(index+word.length());
+                    }
+                }
+            }
+        }
+        return count;
+    }
+    /**
+     * 列出当前文件夹下的文件
+     */
+    public void fileList(String source){
+        File file = new File(source);
+        for (File temp : file.listFiles()) {
+            if (temp.isFile()){
+                System.out.println(temp.getName());
+            }
+        }
+    }
+
+    /**
+     * 列出文件夹下的所有文件，深入
+     */
+    private static void _walkDirectory(File f,int level) throws IOException {
+        if (f.isDirectory()){
+            writeTofile(f, level);
+            for (File temp : f.listFiles()) {
+                _walkDirectory(temp,level+1);
+            }
+        }else {
+            writeTofile(f, level);
+        }
+    }
+
+    private static void writeTofile(File f, int level) throws IOException {
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(new File("F:\\listFile.txt"),true))){
+            for (int i = 0; i < level - 1; i++) {
+                System.out.print("----");
+                bw.write("----");
+            }
+            System.out.println("|"+f.getName());
+            bw.write("|"+f.getName());
+            bw.newLine();
+            bw.flush();
+        }
+    }
+
+    public static void showDirectory(File f) throws IOException {
+        _walkDirectory(f,0);
+    }
+    @Test
+    public void testShow(){
+        try {
+            showDirectory(new File("D:\\MyApp"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 列出文件夹下的所有文件，深入
+     */
+    @Test
+    public void listFiles() throws IOException {
+        Path path = Paths.get("D:\\MyApp");
+        Files.walkFileTree(path,new SimpleFileVisitor<Path>(){
+            @Override
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs){
+                System.out.println(file.getFileName().toString());
+                return FileVisitResult.CONTINUE;
+            }
+        });
+    }
+
 }

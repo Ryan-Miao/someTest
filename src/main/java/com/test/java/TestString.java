@@ -25,6 +25,22 @@ public class TestString {
         System.out.println(str1.equals(str2));  //true
         System.out.println(str1.equals(str3));  //true
     }
+    /**
+     * = =：比较两个String对象的指向的内存地址是否相等。
+     * 结果：false,false
+     */
+@Test
+    public void str_c(){
+        String a = "hehe";
+        String b = "he"+"he";
+        String c = new String("hehe");
+        String d = new String("hehe");
+
+    System.out.println(a==b);//true
+    System.out.println(a==c);//false
+    System.out.println(a==a.intern());//true
+    System.out.println(c==d);//false
+    }
 
     public String change(String s, int i, StringBuffer sb, Person p){
         s="123";
@@ -52,15 +68,7 @@ public class TestString {
         System.out.println(p);
     }
 
-    /**
-     * = =：比较两个String对象的指向的内存地址是否相等。
-     * 结果：false,false
-     */
 
-    public void str_c(){
-        System.out.println(str1==str2);  //false
-        System.out.println(str1==str3);  //false
-    }
 
     /**
      * String 的创建
