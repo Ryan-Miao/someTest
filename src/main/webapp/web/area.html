@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="js/jquery-1.12.2.js" ></script>
+</head>
+<body>
+<div class="selectList">
+    <select class="province" id="province">
+        <option>请选择</option>
+    </select>
+    <select class="city" id="city">
+        <option>请选择</option>
+    </select>
+    <select class="district" id="district">
+        <option>请选择</option>
+    </select>
+    <input type='button' value='获取代码' onclick="getCode();"> </input>
+</div>
+<div class="selectList2">
+    <select class="province">
+        <option>请选择</option>
+    </select>
+    <select class="city">
+        <option>请选择</option>
+    </select>
+    <select class="district">
+        <option>请选择</option>
+    </select>
+</div>
+<script type="text/javascript">
+    function getCode(){
+        console.log($('#province').val());
+        console.log($('#city').val());
+        console.log($('#district').val());
+        alert($('#province').val()+$('#province').find("option:selected").text()
+                +'\n'+$('#city').val()+$('#city').find("option:selected").text()
+                +'\n'+$('#district').val()+$('#district').find("option:selected").text()
+        );
+    }
+
+    function initMyArea(without_id,p,c,d){
+        var oProvince = $('.'+without_id).find(".province");
+        var oCity = $('.'+without_id).find(".city");
+        var oDistrict = $('.'+without_id).find(".district");
+        initProvince(p,c,d);
+
+        function initProvince(pr,ci,di){
+            // var options =getAreaData('000000');
+            $.getJSON('http://api.dangqian.com/apidiqu2/api.asp?format=json&callback=?',{id:'000000000000'},function(data){
+
+                var list = data.list;
+                var temp_html="<option value='0'>请选择</option>";
+                $.each(list,function(name,value){
+                    temp_html+="<option value='"+value.daima+"'>"+value.diming+"</option>";
+
+                });
+
+                oProvince.html(temp_html);
+                if(pr!=undefined){
+                    oProvince.val(pr);
+                }
+                changeProvince(ci,di);
+
+            });
+
+
+        }
+
+        //当省改变赋值市
+        function changeProvince(ci,di){
+            var n = oProvince.val();
+            var pre=n.substring(0,2);
+            if(pre==71 || pre ==81 || pre==82){
+                oDistrict.css("display","none");
+                oCity.css("display","none");
+            }else{
+                oDistrict.css("display","inline");
+                oCity.css("display","line");
+            }
+
+            $.getJSON('http://api.dangqian.com/apidiqu2/api.asp?format=json&callback=?',{id:n},function(data){
+
+                var list = data.list;
+                var temp_html="<option value='0'>请选择</option>";
+                $.each(list,function(name,value){
+                    temp_html+="<option value='"+value.daima+"'>"+value.diming+"</option>";
+
+                });
+
+                oCity.html(temp_html);
+                if(ci!=undefined){
+                    oCity.val(ci);
+                }
+                changeCity(di);
+
+            });
+
+        };
+        //当市改变赋值县
+        function changeCity(di){
+            var n = oCity.val();
+            /*var options =getAreaData(n);
+             oDistrict.html(options);
+             if(di!=undefined)
+             oDistrict.val(di);*/
+            if(n=='0'){
+                oDistrict.val(0);
+                return;
+            }
+            $.getJSON('http://api.dangqian.com/apidiqu2/api.asp?format=json&callback=?',{id:n},function(data){
+
+                var list = data.list;
+                var temp_html="<option value='0'>请选择</option>";
+                $.each(list,function(name,value){
+                    temp_html+="<option value='"+value.daima+"'>"+value.diming+"</option>";
+
+                });
+
+                oDistrict.html(temp_html);
+                if(di!=undefined){
+                    oDistrict.val(di);
+                }
+
+
+            });
+        };
+        //选择省改变市
+        oProvince.change(function(){
+            changeProvince();
+        });
+        //选择市改变县
+        oCity.change(function(){
+            changeCity();
+        });
+
+
+        function getAreaData(code){
+            var temp_html = "<option value='0'>请选择</option>";
+            $.getJSON('http://api.dangqian.com/apidiqu2/api.asp?format=json&callback=?',function(data){
+                console.log(data.list)
+                var list = data.list;
+                $.each(list,function(name,value){
+                    temp_html+="<option value='"+value.daima+"'>"+value.diming+"</option>";
+
+                })
+
+            });
+
+            return temp_html;
+        }
+
+    }
+
+    $(document).ready(function(){
+        initMyArea('selectList','130000000000','130600000000','130622000000');
+        initMyArea('selectList2','210000000000','210500000000','210504000000');
+    });
+
+
+
+</script>
+</body>
+</html>

@@ -1,4 +1,7 @@
 package com.test.refactor.ifelse.news;
+import com.test.refactor.ifelse.news.news2.SystemStatePerformer;
+import com.test.refactor.ifelse.news.news2.SystemStatePerformerFactory;
+
 import static com.test.refactor.ifelse.news.SystemState.*;
 
 /**
@@ -11,7 +14,7 @@ import static com.test.refactor.ifelse.news.SystemState.*;
  * Created by Administrator on 2016/3/28.
  */
 public class SystemManager {
-    SystemState state;
+    SystemStatePerformer statePerformer;
     public void login() {
         // call service#login()
         updateState(LOGGEDIN);
@@ -28,18 +31,16 @@ public class SystemManager {
     }
 
     public void updateState(SystemState state) {
-        if (state == LOGGEDIN) {
-            // do something after logging in is successful,
-            // for example: show welcome dialog, open the last edit document, etc.
-        } else if (state == LOGGEDOUT) {
-            // do something after logging out is successful,
-            // for example: free used resource, dispose GUI components, etc.
-        } else if (state == IDLE) {
-            // do something after the user is idle,
-            // for example: save the application state temporarily, lock the application, etc.
-        } else {
-            throw new IllegalArgumentException("unknown state");
+        try {
+            this.statePerformer = SystemStatePerformerFactory.getInstance().getSystemStatePerformer(state);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        this.state = state;
+    }
+
+    public static void main(String[] args) {
+        Integer s = 1234567890;
+        Integer s2 = 1234567890;
+        System.out.println(s==s2);
     }
 }

@@ -22,5 +22,7 @@ public abstract class SystemStatePerformer {
     public Image getImage(){
         return image;
     }
+    //这里就是每个子类需要实现的逻辑
+    //将ifelse的逻辑转移到继承这个抽象类的子类
     public abstract void perform();
 }

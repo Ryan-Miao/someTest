@@ -27,17 +27,17 @@ public class SystemManagerTest {
     @Test
     public void login(){
         manager.login();
-        assertEquals(manager.state,LOGGEDIN);
+        assertEquals(manager.statePerformer.getState(),LOGGEDIN);
     }
     @Test
     public void logout() {
         manager.logout();
-        assertEquals(manager.state, LOGGEDOUT);
+        assertEquals(manager.statePerformer.getState(), LOGGEDOUT);
     }
 
     @Test
     public void idle() {
         manager.idle();
-        assertEquals(manager.state, IDLE);
+        assertEquals(manager.statePerformer.getState(), IDLE);
     }
 }

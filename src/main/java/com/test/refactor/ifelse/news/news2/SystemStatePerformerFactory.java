@@ -4,6 +4,11 @@ import com.test.refactor.ifelse.news.SystemState;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.test.refactor.ifelse.news.SystemState.*;
 
@@ -22,24 +27,43 @@ import static com.test.refactor.ifelse.news.SystemState.*;
  */
 public class SystemStatePerformerFactory {
     private static SystemStatePerformerFactory instance = new SystemStatePerformerFactory();
-
+    private Map<SystemState,SystemStatePerformer> performers;
     private SystemStatePerformerFactory() {
     }
 
-    public static SystemStatePerformer getSystemStatePerformer(SystemState state) {
-        switch (state) {
-            case LOGGEDIN:
-                return createLoggedInPerformer();
-            case IDLE:
-                return createIdlePerformer();
-            case LOGGEDOUT:
-                return createLoggedOutPerformer();
-            default:
-                throw new IllegalAccessError("Unkonw status");
-        }
+    public static SystemStatePerformerFactory getInstance(){
+        return instance;
     }
 
-    private static SystemStatePerformer createLoggedInPerformer() {
+    public SystemStatePerformer getSystemStatePerformer(SystemState state) throws Exception{
+        return getPerformers().get(state);
+    }
+
+    /**
+     * 通过反射将@FactoryMethod标记的注解的方法执行
+     * @return
+     * @throws InvocationTargetException
+     * @throws IllegalAccessException
+     */
+    private synchronized Map<SystemState,SystemStatePerformer> getPerformers() throws InvocationTargetException, IllegalAccessException {
+        if(performers==null){
+            performers = new HashMap<>();
+            //call all @FactoryMethod using reflection
+            for (Method method : getClass().getDeclaredMethods()) {
+                if (method.getAnnotation(FactoryMethod.class)!=null){
+                    System.out.println(method.getName());
+                    SystemStatePerformer p = (SystemStatePerformer)method.invoke(this);
+                    performers.put(p.getState(),p);
+                }
+            }
+            //make it readonly
+            performers = Collections.unmodifiableMap(performers);
+        }
+        return performers;
+    }
+
+    @FactoryMethod
+    private  SystemStatePerformer createLoggedInPerformer() {
         return new SystemStatePerformer(SystemState.LOGGEDIN, getImage("loggedin.gif")) {
             @Override
             public void perform() {
@@ -47,10 +71,10 @@ public class SystemStatePerformerFactory {
                 // for example: show welcome dialog, open the last edit document, etc.
             }
         };
-
     }
 
-    private static SystemStatePerformer createLoggedOutPerformer() {
+    @FactoryMethod
+    private  SystemStatePerformer createLoggedOutPerformer() {
         return new SystemStatePerformer(LOGGEDOUT, getImage("loggedout.gif")) {
             @Override
             public void perform() {
@@ -60,7 +84,8 @@ public class SystemStatePerformerFactory {
         };
     }
 
-    private static SystemStatePerformer createIdlePerformer() {
+    @FactoryMethod
+    private  SystemStatePerformer createIdlePerformer() {
         return new SystemStatePerformer(IDLE, getImage("idle.gif")) {
             @Override
             public void perform() {
