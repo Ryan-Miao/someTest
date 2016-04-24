@@ -1,45 +1,66 @@
 package com.test.java;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import com.test.util.encrypt.AESEncrypt;
+import com.test.util.encrypt.DESUtil;
+
+import java.io.*;
 
 public class TestRead {
-	
-	public static void readTxt(String filePath){
-		String encoding = "utf-8";
-		File file = new File(filePath);
-		if(file.isFile() && file.exists()){
-			try {
-				InputStreamReader read = new InputStreamReader(
-						new FileInputStream(file),encoding);
-				BufferedReader bfr = new BufferedReader(read);
-				String lineTxt = null;
-				while((lineTxt = bfr.readLine())!=null){
-					System.out.println(lineTxt);
-				}
-				bfr.close();
-				read.close();
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	
-	public static void main(String[] args) {
-		readTxt("F:\\provinces.txt");
-	}
-	
-	
+
+    private static String encoding = "utf-8";
+
+    public static void readTxt(String filePath) throws IOException {
+        File file = new File(filePath);
+        if (file.isFile() && file.exists()) {
+            InputStreamReader read = new InputStreamReader(
+                    new FileInputStream(file), encoding);
+            BufferedReader bfr = new BufferedReader(read);
+            String lineTxt = null;
+            while ((lineTxt = bfr.readLine()) != null) {
+                System.out.println(lineTxt);
+            }
+            read.close();
+            bfr.close();
+        }
+    }
+
+    public static String readFile(String path) throws IOException {
+        FileReader fileReader = new FileReader(path);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        String lineTxt = null;
+        StringBuffer sb = new StringBuffer();
+        while ((lineTxt = bufferedReader.readLine()) != null) {
+            sb.append(lineTxt);
+        }
+        bufferedReader.close();
+        fileReader.close();
+
+        return sb.toString();
+    }
+
+    public static void writeTxt(String path, String data) throws IOException {
+        FileWriter fileWriter = new FileWriter(path);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        bufferedWriter.write(data);
+        bufferedWriter.close();
+        fileWriter.close();
+    }
+
+    public static void main(String[] args) throws Exception {
+        String origin = "C:\\Users\\miaorf\\Desktop\\test.json";
+        String dest = "C:\\Users\\miaorf\\Desktop\\wr.json";
+        String key = "abc";
+        String data = readFile(origin);
+        System.out.println("读取：=========");
+        System.out.println(data);
+        String encrypt = AESEncrypt.aesEncrypt(data, key);
+        System.out.println("加密：=========");
+        System.out.println(encrypt);
+        writeTxt(dest,encrypt);
+        System.out.println("解密：=========");
+        System.out.println(AESEncrypt.aesDecrypt(encrypt,key));
+
+    }
+
+
 }
