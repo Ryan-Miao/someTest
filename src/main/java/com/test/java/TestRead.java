@@ -48,7 +48,7 @@ public class TestRead {
     public static void main(String[] args) throws Exception {
         String origin = "C:\\Users\\miaorf\\Desktop\\test.json";
         String dest = "C:\\Users\\miaorf\\Desktop\\test2.json";
-        String key = "密码";
+        String key = "7521";
         String data = readFile(origin);
         System.out.println("读取：=========");
         System.out.println(data);
@@ -57,7 +57,9 @@ public class TestRead {
         System.out.println(encrypt);
         writeTxt(dest,encrypt);
         System.out.println("解密：=========");
-        System.out.println(AESEncrypt.aesDecrypt(readFile(dest),key).replaceAll("[\\s*\\t\\n\\r]",""));
+        String result = AESEncrypt.aesDecrypt(readFile(dest), key);
+        System.out.println(result);
+//        writeTxt(origin,result);
 
     }
 
