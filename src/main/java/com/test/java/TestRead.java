@@ -48,7 +48,7 @@ public class TestRead {
     public static void main(String[] args) throws Exception {
         String origin = "C:\\Users\\miaorf\\Desktop\\test.json";
         String dest = "C:\\Users\\miaorf\\Desktop\\test2.json";
-        String key = "7521";
+        String key = "1234";
         String data = readFile(origin);
         System.out.println("读取：=========");
         System.out.println(data);
