@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * long的==
  * 今天遇到一个问题，List<Long>,我想判断list中contain
+ *
  * Created by Ryan on 2016/5/26 0026.
  */
 public class TestLong {
