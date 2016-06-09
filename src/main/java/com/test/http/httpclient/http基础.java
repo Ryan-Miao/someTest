@@ -15,8 +15,7 @@ import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.client.utils.URIUtils;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.conn.ssl.SSLContextBuilder;
-import org.apache.http.conn.ssl.TrustStrategy;
+import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.entity.*;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -26,6 +25,8 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.ExecutionContext;
 import org.apache.http.protocol.HttpContext;
+import org.apache.http.ssl.SSLContextBuilder;
+import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
@@ -37,8 +38,6 @@ import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -247,9 +246,9 @@ public class http基础 {
     @Test
     public void htmlForm() throws IOException {
         List<NameValuePair> formparams = new ArrayList<>();
-        formparams.add(new BasicNameValuePair("tel","123"));
-        formparams.add(new BasicNameValuePair("password","abc"));
-        UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams,"utf-8");
+        formparams.add(new BasicNameValuePair("tel", "123"));
+        formparams.add(new BasicNameValuePair("password", "abc"));
+        UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, "utf-8");
         HttpPost httpPost = new HttpPost("http://localhost:8080/app/login/loginByPass");
 //        HttpPost httpPost = new HttpPost("http://localhost:8080");
         httpPost.setEntity(entity);
@@ -261,12 +260,12 @@ public class http基础 {
         System.out.println(response.toString());
 
         HttpEntity entity1 = response.getEntity();
-        if(entity1!=null){
+        if (entity1 != null) {
             InputStream inputStream = entity1.getContent();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuffer sb = new StringBuffer();
-            String readline=null;
-            while ((readline=bufferedReader.readLine())!=null){
+            String readline = null;
+            while ((readline = bufferedReader.readLine()) != null) {
                 sb.append(readline);
             }
             inputStream.close();
@@ -284,18 +283,18 @@ public class http基础 {
             @Override
             public byte[] handleResponse(HttpResponse response) throws ClientProtocolException, IOException {
                 HttpEntity entity = response.getEntity();
-                if(entity!=null){
+                if (entity != null) {
                     return EntityUtils.toByteArray(entity);
-                }else{
+                } else {
                     return null;
                 }
 
             }
         };
         List<NameValuePair> formparams = new ArrayList<>();
-        formparams.add(new BasicNameValuePair("tel","123"));
-        formparams.add(new BasicNameValuePair("password","abc"));
-        UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams,"utf-8");
+        formparams.add(new BasicNameValuePair("tel", "123"));
+        formparams.add(new BasicNameValuePair("password", "abc"));
+        UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, "utf-8");
         httpPost.setEntity(entity);
         byte[] response = httpclient.execute(httpPost, handler);
         System.out.println(new String(response));
@@ -310,9 +309,9 @@ public class http基础 {
         HttpPost httpPost = new HttpPost("http://localhost:8080/app/login/loginByPass");
         HttpResponse res = httpclient.execute(httpPost, localContext);
         HttpHost target = (HttpHost) localContext.getAttribute(ExecutionContext.HTTP_TARGET_HOST);
-        System.out.println("final target:"+target);
+        System.out.println("final target:" + target);
         HttpEntity entity = res.getEntity();
-        if(entity!=null){
+        if (entity != null) {
             EntityUtils.consume(entity);
         }
 
@@ -322,26 +321,26 @@ public class http基础 {
      * 请求重试
      */
     @Test
-    public void retry(){
+    public void retry() {
         HttpPost httpPost = new HttpPost("http://localhost:8080/app/login/loginByPass");
         HttpRequestRetryHandler myRetryhandler = new HttpRequestRetryHandler() {
             @Override
             public boolean retryRequest(IOException exception, int executionCount, HttpContext context) {
-                if(executionCount>=5){
+                if (executionCount >= 5) {
                     //如果超过最大重试次数
                     return false;
                 }
-                if(exception instanceof NoHttpResponseException){
+                if (exception instanceof NoHttpResponseException) {
                     //如果服务器丢掉了连接，重试
                     return true;
                 }
-                if(exception instanceof SSLHandshakeException){
+                if (exception instanceof SSLHandshakeException) {
                     //不重试ssl握手异常
                     return false;
                 }
-                HttpRequest request = (HttpRequest)context.getAttribute(ExecutionContext.HTTP_REQ_SENT);
+                HttpRequest request = (HttpRequest) context.getAttribute(ExecutionContext.HTTP_REQ_SENT);
                 boolean idempotent = !(request instanceof HttpEntityEnclosingRequest);
-                if(idempotent){
+                if (idempotent) {
                     //如果是幂等的
                     return true;
                 }
@@ -351,12 +350,12 @@ public class http基础 {
     }
 
     /**
-     *拦截器
+     * 拦截器
      */
-    public void interceptor(){
+    public void interceptor() {
         HttpClientContext localContext = HttpClientContext.create();
         AtomicInteger count = new AtomicInteger(1);
-        localContext.setAttribute("count",count);
+        localContext.setAttribute("count", count);
 
     }
 
@@ -379,31 +378,24 @@ public class http基础 {
 
         HttpPost httpPost = new HttpPost(target);
         for (NameValuePair header : headers) {
-            httpPost.addHeader(header.getName(),header.getValue());
+            httpPost.addHeader(header.getName(), header.getValue());
         }
-        httpPost.setEntity(new StringEntity(objectNode.toString(),"utf-8"));
+        httpPost.setEntity(new StringEntity(objectNode.toString(), "utf-8"));
 
-        httpclient=getClient(true);
+        httpclient = getClient(true);
 
         HttpResponse response = httpclient.execute(httpPost);
         System.out.println(response.toString());
         HttpEntity entity1 = response.getEntity();
-        System.out.println(EntityUtils.toString(entity1,"utf-8"));
+        System.out.println(EntityUtils.toString(entity1, "utf-8"));
 
     }
 
-    public static HttpClient getClient(boolean isSSL){
-
+    public static HttpClient getClient(boolean isSSL) {
         if (isSSL) {
             try {
                 SSLContext sslContext = new SSLContextBuilder()
-                        .loadTrustMaterial(null, new TrustStrategy() {
-                            //信任所有
-                            public boolean isTrusted(X509Certificate[] chain,
-                                                     String authType) throws CertificateException {
-                                return true;
-                            }
-                        }).build();
+                        .loadTrustMaterial(new TrustSelfSignedStrategy()).build();
                 SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(
                         sslContext);
                 return HttpClients.custom().setSSLSocketFactory(sslsf).build();
@@ -420,7 +412,62 @@ public class http基础 {
     }
 
 
+    //test https ignore certification
+    @Test
+    public void testHttps() throws Exception {
+        String target = "https://localhost:8443/hello/list";
+        HttpPost post = new HttpPost(target);
+        httpclient = getClient(true);
+        HttpResponse response = httpclient.execute(post);
+        HttpEntity entity = response.getEntity();
+        String result = EntityUtils.toString(entity);
+        System.out.println(result);
+    }
 
+    //test https with a certain certification
+    @Test
+    public void testHttpsWithCertification() throws Exception {
+        // Trust own CA and all self-signed certs
+        SSLContext sslcontext = SSLContexts.custom()
+                .loadTrustMaterial(new File("my.keystore"), "123456".toCharArray(),
+                        new TrustSelfSignedStrategy())
+                .build();
+
+        // Allow TLSv1 protocol only
+        SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(
+                sslcontext,
+                new String[]{"TLSv1"},
+                null,
+                SSLConnectionSocketFactory.getDefaultHostnameVerifier());
+        CloseableHttpClient httpclient = HttpClients.custom()
+                .setSSLSocketFactory(sslsf)
+                .build();
+        try {
+
+            HttpGet httpget = new HttpGet("https://localhost:8443/hello/list");
+
+            System.out.println("Executing request " + httpget.getRequestLine());
+
+            CloseableHttpResponse response = httpclient.execute(httpget);
+            try {
+                HttpEntity entity = response.getEntity();
+
+                System.out.println("----------------------------------------");
+                System.out.println(response.getStatusLine());
+                System.out.println(EntityUtils.toString(entity));
+            } finally {
+                response.close();
+            }
+        } finally {
+            httpclient.close();
+        }
+    }
 
 
 }
+
+
+
+
+
+

@@ -34,6 +34,7 @@ com\test\java\thread\TestLock$2.class
 com\test\java\tenum\NonEnum.class
 com\test\util\PicUtil.class
 com\test\java\tenum\Search.class
+com\test\java\TestLong.class
 com\test\arithmetic\list\sort\SortList.class
 com\test\arithmetic\base\Stack$Node.class
 com\test\reflect\FruitFactoryByReflect.class
@@ -76,7 +77,7 @@ com\test\arithmetic\list\sort\SortList$1.class
 com\test\reflect\RealSubject.class
 com\test\java\thread\concurrency\SocketUsingTask$1.class
 com\test\java\designPattern\observer\Observer.class
-com\test\http\httpclient\httpåŸºç¡€$1.class
+com\test\http\httpclient\http»ù´¡$1.class
 com\test\java\classs\Testpc.class
 com\test\java\designPattern\singleton\Singleton4.class
 com\test\java\thread\concurrency\FileCrawler.class
@@ -172,7 +173,7 @@ com\test\java\Base.class
 com\test\java\TestMap.class
 com\test\java\thread\concurrency\Indexer$1.class
 com\test\connectDb\Zone.class
-com\test\http\httpclient\httpåŸºç¡€$3.class
+com\test\http\httpclient\http»ù´¡$3.class
 com\test\java\designPattern\factory\abstractFactory\Provider.class
 com\test\java\TestRegex.class
 com\test\reflect\Apple.class
@@ -205,7 +206,7 @@ com\test\java\thread\DeadLockRisk$1.class
 com\test\arithmetic\base\Queue$1.class
 com\test\java\thread\TestReadWriteLock$1.class
 com\test\java\tenum\Food.class
-com\test\http\httpclient\httpåŸºç¡€$2.class
+com\test\http\httpclient\http»ù´¡$2.class
 com\test\util\PicUtil$UploadFolder$2.class
 com\test\java\genericity\LinkedListStack$Node.class
 com\test\java\thread\concurrency\PublishingVehicleTracker.class
@@ -251,7 +252,6 @@ com\test\refactor\ifelse\news\news2\SystemStatePerformerFactory$2.class
 com\test\connectDb\TestConDataBase.class
 com\test\java\thread\concurrency\FutureRender$1.class
 com\test\java\thread\concurrency\MyTask.class
-com\test\http\httpclient\httpåŸºç¡€$4.class
 com\test\java\thread\concurrency\TestThreadLocal$1.class
 com\test\java\TestMath.class
 com\test\refactor\ifelse\news\SystemManagerTest.class
@@ -262,7 +262,7 @@ com\test\java\Game.class
 com\test\util\PicUtil$UploadFolder.class
 com\test\java\thread\concurrency\ImageData.class
 com\test\reflect\DynamicProxy2.class
-com\test\http\httpclient\httpåŸºç¡€.class
+com\test\http\httpclient\http»ù´¡.class
 com\test\reflect\RealSubject2.class
 com\test\java\thread\concurrency\ExpensiveFunction.class
 com\test\java\thread\concurrency\Holder.class
