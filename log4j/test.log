@@ -4690,3 +4690,261 @@ java.net.SocketException: Software caused connection abort: recv failed
 
 2015-12-01 14:12:30
 [DEBUG]-[Thread: main]-[org.apache.http.impl.conn.PoolingHttpClientConnectionManager.shutdown()]: Connection manager shut down
+
+2016-06-11 22:03:53
+[INFO]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:07:42
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:07:42
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:2016年6月11日
+
+
+2016-06-11 22:07:42
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:2016-6-11
+
+
+2016-06-11 22:07:42
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:16-6-11
+
+
+2016-06-11 22:08:08
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:08:08
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:2016年6月11日
+
+
+2016-06-11 22:08:08
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format2:2016-6-11
+
+
+2016-06-11 22:08:08
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format3:16-6-11
+
+
+2016-06-11 22:08:23
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:08:23
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:08:23
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format2:2016-6-11
+
+2016-06-11 22:08:23
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format3:16-6-11
+
+2016-06-11 22:09:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:09:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:2016年6月11日 星期六
+
+2016-06-11 22:09:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:09:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format2:2016-6-11
+
+2016-06-11 22:09:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format3:16-6-11
+
+2016-06-11 22:09:25
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:09:25
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format0:2016年6月11日 星期六
+
+2016-06-11 22:09:25
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:09:25
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format2:2016-6-11
+
+2016-06-11 22:09:25
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: format3:16-6-11
+
+2016-06-11 22:12:22
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:12:22
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format0:2016年6月11日 星期六
+
+2016-06-11 22:12:22
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:12:22
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:2016-6-11
+
+2016-06-11 22:12:22
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format3:16-6-11
+
+2016-06-11 22:12:44
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:12:44
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format0:2016年6月11日 星期六
+
+2016-06-11 22:12:44
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:12:44
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:2016-6-11
+
+2016-06-11 22:12:44
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format3:16-6-11
+
+2016-06-11 22:17:24
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: date: 2016-6-11 
+
+
+2016-06-11 22:17:24
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format0:2016年6月11日 星期六
+
+2016-06-11 22:17:24
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:17:24
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:2016-6-11
+
+2016-06-11 22:17:24
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format3:16-6-11
+
+2016-06-11 22:17:24
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: time format default: 2016-6-11 22:17:24
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: dateFormat default: 2016-6-11 
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format0:2016年6月11日 星期六
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:2016-6-11
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format3:16-6-11
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: time format default: 2016-6-11 22:19:39
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 22:19:39
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 22:19:39
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 22:19:39
+
+2016-06-11 22:19:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 22:19:39
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: dateFormat default: 2016-6-11 
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format0:2016年6月11日 星期六
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format1:2016年6月11日
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:2016-6-11
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format3:16-6-11
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testDateFormat()]: time format default: 2016-6-11 22:20:41
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 下午10时20分41秒 CST
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 下午10时20分41秒
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 22:20:41
+
+2016-06-11 22:20:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format default: 2016-6-11 下午10:20
+
+2016-06-11 22:23:04
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testTimeFormat()]: time format default: 2016-6-11 22:23:04
+
+2016-06-11 22:23:04
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@c966f24e: 2016-6-11 下午10时23分04秒 CST
+
+2016-06-11 22:23:04
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@9e71daf4: 2016-6-11 下午10时23分04秒
+
+2016-06-11 22:23:04
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@d9235b7f: 2016-6-11 22:23:04
+
+2016-06-11 22:23:04
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@32f67e4a: 2016-6-11 下午10:23
+
+2016-06-11 22:25:54
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testTimeFormat()]: time format default: 2016-6-11 22:25:54
+
+2016-06-11 22:25:54
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@c966f24e: 2016-6-11 下午10时25分54秒 CST
+
+2016-06-11 22:27:00
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testTimeFormat()]: time format default: 2016-6-11 22:27:00
+
+2016-06-11 22:27:00
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@c966f24e: 2016-6-11 下午10时27分00秒 CST
+
+2016-06-11 22:27:00
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@9e71daf4: 2016-6-11 下午10时27分00秒
+
+2016-06-11 22:27:00
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@d9235b7f: 2016-6-11 22:27:00
+
+2016-06-11 22:27:00
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@32f67e4a: 2016-6-11 下午10:27
+
+2016-06-11 22:32:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testTimeFormat()]: time format default: 2016-6-11 22:32:39
+
+2016-06-11 22:32:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@c966f24e: 2016-6-11 下午10时32分39秒 CST
+
+2016-06-11 22:32:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@9e71daf4: 2016-6-11 下午10时32分39秒
+
+2016-06-11 22:32:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@d9235b7f: 2016-6-11 22:32:39
+
+2016-06-11 22:32:39
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@32f67e4a: 2016-6-11 下午10:32
+
+2016-06-11 22:33:35
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testTimeFormat()]: time format default: 2016-6-11 22:33:35
+
+2016-06-11 22:33:36
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@c966f24e: 2016-6-11 下午10时33分35秒 CST
+
+2016-06-11 22:33:36
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@9e71daf4: 2016-6-11 下午10时33分35秒
+
+2016-06-11 22:33:36
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@d9235b7f: 2016-6-11 22:33:35
+
+2016-06-11 22:33:36
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@32f67e4a: 2016-6-11 下午10:33

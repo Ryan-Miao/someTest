@@ -3,7 +3,10 @@ package com.test.quartz;
 import org.quartz.*;
 import org.quartz.impl.JobDetailImpl;
 import org.quartz.impl.StdSchedulerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,9 +15,46 @@ import java.util.Date;
  * Created by mrf on 2016/3/3.
  */
 public class HelloQuartz  implements Job{
+    Logger logger = LoggerFactory.getLogger(HelloQuartz.class);
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        System.out.println("Hellow Quarz! - executing its job at "+new Date()+" by "+jobExecutionContext.getTrigger().getKey());
+
+        logger.debug("Hellow Quarz! - executing its job at "+DateFormat.getDateTimeInstance().format(new Date())+" by "+jobExecutionContext.getTrigger().getKey() + "\n \n");
+    }
+}
+
+class BootstrapQuartz{
+    private static Logger logger = LoggerFactory.getLogger(BootstrapQuartz.class);
+
+    public static void main(String[] args) {
+        try {
+            //获取scheduler实例
+            Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+            scheduler.start();
+
+            //具体任务
+            JobDetail jobDetail = JobBuilder.newJob(HelloQuartz.class).withIdentity("job1","group1").build();
+
+            //触发时间
+            SimpleScheduleBuilder simpleScheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
+                    .withIntervalInSeconds(5).repeatForever();
+            Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1","group1")
+                    .startNow().withSchedule(simpleScheduleBuilder).build();
+
+            //交由scheduler安排触发
+            scheduler.scheduleJob(jobDetail,trigger);
+
+            //exe 5s
+            Thread.sleep(10000);
+
+            //stop
+            scheduler.shutdown();
+        } catch (SchedulerException e) {
+            e.printStackTrace();
+            logger.error("exe job error:"+e.getMessage());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 
