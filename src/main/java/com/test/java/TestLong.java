@@ -52,4 +52,11 @@ public class TestLong {
         assertTrue(list.contains(1L));
         assertTrue(list.contains(2L));
     }
+
+    @Test
+    public void test2(){
+        Long a = new Long("123");
+        Long b = 123L;
+        assertEquals(a,b);
+    }
 }
