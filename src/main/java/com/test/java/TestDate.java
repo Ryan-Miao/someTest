@@ -6,9 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.stream.Stream;
 
 public class TestDate {
 
@@ -30,15 +33,35 @@ public class TestDate {
 		System.out.println(now.get(Calendar.MONDAY));
 	}
 	
-	public void dateFormat(){
-		SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd");
+	public void dateFormat(String pattern){
+		SimpleDateFormat sdf= new SimpleDateFormat(pattern);
 		System.out.println(sdf.format(System.currentTimeMillis()));
 		
+	}
+
+	@Test
+	public void testCalend() throws ParseException {
+		Calendar calendar = Calendar.getInstance();
+
+		String date = "2016-06-13";
+		calendar.setTime(new SimpleDateFormat("yyyy-MM-dd").parse(date));
+		calendar.add(Calendar.DAY_OF_MONTH,7);
+		System.out.println(calendar.before(Calendar.getInstance()));
 	}
 
 	/*********************************************************************************
 	 *	test DateFormat
 	 *********************************************************************************/
+
+	@Test
+	public void testSimpleDateFormat() throws  Exception{
+		dateFormat("yyy-MM-dd hh:mm:ss");
+
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd");
+		Date parse = simpleDateFormat.parse("2016-06-21");
+		System.out.println(parse);
+	}
+
 	@Test
 	public void testDateFormat() throws Exception{
 		Date date = new Date();
@@ -84,12 +107,12 @@ public class TestDate {
 	private void dateFormat(Date date, int type) {
 		DateFormat format = DateFormat.getDateInstance(type);
 		String result = format.format(date);
-		logger.debug("format{}:{}",type,result);
+		logger.debug("format  {}:{}",type,result);
 	}
 
 	public static void main(String[] args) {
 		TestDate td = new TestDate();
-		td.dateFormat();
+		td.dateFormat("yyyy-MM-dd");
 	}
 
 }

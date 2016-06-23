@@ -4948,3 +4948,60 @@ java.net.SocketException: Software caused connection abort: recv failed
 
 2016-06-11 22:33:36
 [DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@32f67e4a: 2016-6-11 下午10:33
+
+2016-06-15 18:45:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.testTimeFormat()]: time format default: Jun 15, 2016 6:45:09 PM
+
+2016-06-15 18:45:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@3d36b248: Jun 15, 2016 6:45:09 PM PDT
+
+2016-06-15 18:45:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@3d36b248: Jun 15, 2016 6:45:09 PM PDT
+
+2016-06-15 18:45:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@7945516e: Jun 15, 2016 6:45:09 PM
+
+2016-06-15 18:45:09
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.timeFormat()]: time format java.text.SimpleDateFormat@fcdbe18e: Jun 15, 2016 6:45 PM
+
+2016-06-21 20:17:08
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:Jun 24, 2016
+
+2016-06-21 20:17:41
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:Jun 24, 2016
+
+2016-06-21 20:18:12
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format1:June 24, 2016
+
+2016-06-21 20:19:12
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format2:May 24, 2016
+
+2016-06-21 20:20:12
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:Jun 21, 2016
+
+2016-06-21 20:20:12
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:May 24, 2016
+
+2016-06-21 20:21:28
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:Jun 21, 2016
+
+2016-06-21 20:21:28
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:Dec 24, 2015
+
+2016-06-21 20:22:00
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:Jun 21, 2016
+
+2016-06-21 20:22:00
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:May 24, 2016
+
+2016-06-21 20:23:27
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:Jun 21, 2016
+
+2016-06-21 20:23:27
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:May 24, 2016
+
+2016-06-21 20:23:37
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:Jun 21, 2016
+
+2016-06-21 20:23:37
+[DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:May 29, 2016

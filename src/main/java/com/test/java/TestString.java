@@ -3,6 +3,7 @@ package com.test.java;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -103,11 +104,12 @@ public class TestString {
     * @param
     * @return void    返回类型
      */
-
+    @Test
     public void str_sub(){
-    	String str="unhappy";
+    	String str="0123456";
     	System.out.println(str.charAt(2));
     	System.out.println(str.substring(2));
+    	System.out.println(str.substring(2,4));
     	System.out.println(str.substring(2,str.length()));
     }
     
@@ -230,6 +232,13 @@ public class TestString {
         StringBuffer sb = new StringBuffer();
         sb.append("");
         System.out.println(sb.length());
+        System.out.println("=------------------------------------------------------=");
+        String alerts = "mongo/alerts/contentAlerts-2017-12-01.json";
+        Arrays.stream(alerts.split("/")).forEach(System.out::println);
+
+
+        System.out.println(alerts.split("/")[2].substring(14,24));
+
 
     }
 
@@ -258,3 +267,5 @@ public class TestString {
 		}
 	}
 }
+
+//
