@@ -1,5 +1,6 @@
 package com.test.util;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import java.io.*;
@@ -230,6 +231,12 @@ public class FileUtil {
                 return FileVisitResult.CONTINUE;
             }
         });
+    }
+
+    @Test
+    public void deleteFile() throws Exception{
+        File dir = new File("D:\\perforce\\workspace\\EPC");
+        FileUtils.deleteDirectory(dir);
     }
 
 }
