@@ -111,6 +111,14 @@ public class TestDataType {
     	System.out.println((int)1.7);
     	System.out.println((int)2.7);
     }
+
+
+	@Test
+	public void testByte(){
+		Byte b = 12;
+		System.out.println(b);
+		System.out.println((int)b);
+	}
     
     
     
