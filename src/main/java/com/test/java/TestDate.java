@@ -94,6 +94,13 @@ public class TestDate {
 		timeFormat(date,2,3);//2016-6-11 下午10:23
 	}
 
+	@Test
+	public void testTimeZone(){
+		Date date = new Date();
+		System.out.println(date);
+
+	}
+
 	private String timeFormat(Date date, int dateStyle,
 							  int timeStyle) {
 		DateFormat timeFormat;
