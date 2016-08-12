@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 import java.util.stream.Stream;
 
 public class TestDate {
@@ -95,9 +96,39 @@ public class TestDate {
 	}
 
 	@Test
-	public void testTimeZone(){
+	public void testTimeZone() throws ParseException {
+		String[] availableIDs = TimeZone.getAvailableIDs();
+		for (String availableID : availableIDs) {
+			System.out.print(availableID+" ");
+		}
+		System.out.println();
+
 		Date date = new Date();
-		System.out.println(date);
+		System.out.println("default:  "+date.toString());
+
+		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+		System.out.println("utc:  "+date);
+
+		TimeZone.setDefault(TimeZone.getTimeZone("CST"));
+		System.out.println("CST:  "+date);
+
+		TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
+		System.out.println("Asia/Shanghai:  "+date);
+
+
+		//not work, only show the CDT time, so toString is
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		calendar.setTimeZone(TimeZone.getTimeZone("UTC"));
+		System.out.println(calendar.getTime());
+
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+		Date parse = sdf.parse("2016-08-12 10:31:20");
+		System.out.println("default: "+parse);
+		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+		System.out.println("UTC:  "+parse);
+
 
 	}
 
