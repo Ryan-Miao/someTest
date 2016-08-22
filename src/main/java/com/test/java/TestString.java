@@ -242,6 +242,13 @@ public class TestString {
 
     }
 
+    @Test
+    public void testSplitSpecial(){
+        String str= "aaa.bbbb.cccc.ddd";
+        String[] split = str.split("\\.");
+        Arrays.stream(split).forEach(System.out::println);
+    }
+
     /**
      * 深入理解java虚拟机
      * 2-7
