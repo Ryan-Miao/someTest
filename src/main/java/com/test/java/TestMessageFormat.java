@@ -27,4 +27,11 @@ public class TestMessageFormat {
                 " Integer: 123 \n" +
                 " Double: 12.34", ryan);
     }
+
+    @Test(expected = IllegalArgumentException.class )
+    public void testPatten() throws Exception{
+        String message = "String key patter: {name}";
+        String names = MessageFormat.format(message, "names");
+        System.out.println(names);
+    }
 }
