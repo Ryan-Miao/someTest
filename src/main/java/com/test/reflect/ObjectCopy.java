@@ -1,5 +1,7 @@
 package com.test.reflect;
 
+import org.junit.*;
+
 import java.io.*;
 import java.lang.reflect.Field;
 
@@ -61,6 +63,31 @@ public class ObjectCopy {
         return false;
     }
 
+    @org.junit.Test
+    public void testCloneBySer(){
+        A baseObject = new A(new B(new C("bString1", "bString2"), 1, 2), new C(
+                "cString1", "cString2"));
+        A o = (A) cloneBySer(baseObject);
+        System.out.println(baseObject);
+        System.out.println(o);
+        baseObject.setB(null);
+        System.out.println(baseObject);
+        System.out.println(o);
+    }
+
+    @org.junit.Test
+    public void testCloneBySerialize(){
+        A baseObject = new A(new B(new C("bString1", "bString2"), 1, 2), new C(
+                "cString1", "cString2"));
+        A o = cloneBySerialize(baseObject);
+        System.out.println(baseObject);
+        System.out.println(o);
+        System.out.println(baseObject.equals(o));
+        baseObject.setB(null);
+        System.out.println(baseObject);
+        System.out.println(o);
+    }
+
     // 用序列化与反序列化实现深克隆
     public static Object cloneBySer(Object baseObj) {
         Object o = null;
@@ -73,6 +100,26 @@ public class ObjectCopy {
                     .toByteArray());
             ObjectInputStream ois = new ObjectInputStream(bais);
             o = ois.readObject();
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return o;
+    }
+
+    public static <T> T cloneBySerialize(T baseObj) {
+        T o = null;
+        try {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(baos);
+            oos.writeObject(baseObj);
+            oos.close();
+            ByteArrayInputStream bais = new ByteArrayInputStream(baos
+                    .toByteArray());
+            ObjectInputStream ois = new ObjectInputStream(bais);
+            o = (T) ois.readObject();
             ois.close();
         } catch (IOException e) {
             e.printStackTrace();
