@@ -130,6 +130,18 @@ public class TestDate {
 		System.out.println("UTC:  "+parse);
 
 
+		calendar = Calendar.getInstance();
+		int y = calendar.get(Calendar.YEAR);
+		int m = calendar.get(Calendar.MONTH);
+		int d = calendar.get(Calendar.DAY_OF_MONTH);
+		calendar.clear();
+		calendar.set(y,m,d);
+		Date end = calendar.getTime();
+		calendar.add(Calendar.DAY_OF_MONTH,-1);
+		Date start = calendar.getTime();
+		System.out.println(start);
+		System.out.println(end);
+
 	}
 
 	private String timeFormat(Date date, int dateStyle,
