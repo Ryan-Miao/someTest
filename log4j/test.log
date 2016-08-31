@@ -5005,3 +5005,218 @@ java.net.SocketException: Software caused connection abort: recv failed
 
 2016-06-21 20:23:37
 [DEBUG]-[Thread: main]-[com.test.java.TestDate.dateFormat()]: format  2:May 29, 2016
+
+2016-08-31 00:22:45
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1004 ms
+
+2016-08-31 00:22:46
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for first time: 1010 ms.
+
+2016-08-31 00:22:46
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for second time: 0 ms.
+
+2016-08-31 00:25:31
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1500 ms
+
+2016-08-31 00:25:32
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for first time: 1155 ms.
+
+2016-08-31 00:25:32
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for second time: 0 ms.
+
+2016-08-31 00:25:33
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1022 ms
+
+2016-08-31 00:25:33
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for second: 0 ms
+
+2016-08-31 00:26:35
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1324 ms
+
+2016-08-31 00:26:36
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for the first time: 1074 ms.
+
+2016-08-31 00:26:36
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for the second time: 0 ms.
+
+2016-08-31 00:26:37
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1015 ms
+
+2016-08-31 00:26:37
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 00:26:38
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for the third time: 999 ms.
+
+2016-08-31 00:27:21
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1004 ms
+
+2016-08-31 00:27:22
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for the first time: 1056 ms.
+
+2016-08-31 00:27:22
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for the second time: 0 ms.
+
+2016-08-31 00:27:24
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1032 ms
+
+2016-08-31 00:27:24
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 00:27:25
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for the third time: 999 ms.
+
+2016-08-31 00:27:25
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time use cache and get for the fourth time: 0 ms.
+
+2016-08-31 00:28:24
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1120 ms
+
+2016-08-31 00:28:25
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the first time: 1181 ms.
+
+2016-08-31 00:28:25
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the second time: 0 ms.
+
+2016-08-31 00:28:26
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1011 ms
+
+2016-08-31 00:28:26
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 00:28:27
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the third time: 999 ms.
+
+2016-08-31 00:28:27
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the fourth time: 0 ms.
+
+2016-08-31 00:28:54
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1146 ms
+
+2016-08-31 00:28:55
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the first time: 1140 ms.
+
+2016-08-31 00:28:55
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the second time: 0 ms.
+
+2016-08-31 00:28:56
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1238 ms
+
+2016-08-31 00:28:56
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 00:28:57
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the third time: 1000 ms.
+
+2016-08-31 00:28:57
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the fourth time: 0 ms.
+
+2016-08-31 02:10:42
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1007 ms
+
+2016-08-31 02:10:43
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the first time: 1178 ms.
+
+2016-08-31 02:10:43
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the second time: 0 ms.
+
+2016-08-31 02:10:44
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1018 ms
+
+2016-08-31 02:10:44
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 02:10:45
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the third time: 999 ms.
+
+2016-08-31 02:10:45
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the fourth time: 0 ms.
+
+2016-08-31 02:10:45
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The stat 
+hitCount:3  
+hitRate: 0.5
+
+2016-08-31 02:11:38
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1005 ms
+
+2016-08-31 02:11:39
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the first time: 1011 ms.
+
+2016-08-31 02:11:39
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the second time: 0 ms.
+
+2016-08-31 02:11:40
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1011 ms
+
+2016-08-31 02:11:40
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 02:11:40
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The stat 
+hitCount:0  
+hitRate: 1.0
+
+2016-08-31 02:11:41
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the third time: 999 ms.
+
+2016-08-31 02:11:41
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the fourth time: 0 ms.
+
+2016-08-31 02:11:41
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The stat 
+hitCount:0  
+hitRate: 1.0
+
+2016-08-31 02:12:27
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1003 ms
+
+2016-08-31 02:12:28
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the first time: 1035 ms.
+
+2016-08-31 02:12:28
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the second time: 0 ms.
+
+2016-08-31 02:12:29
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1015 ms
+
+2016-08-31 02:12:29
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 02:12:30
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the third time: 999 ms.
+
+2016-08-31 02:12:30
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the fourth time: 0 ms.
+
+2016-08-31 02:12:30
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The stat 
+hitCount:3  
+hitRate: 0.5
+
+2016-08-31 02:13:10
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1004 ms
+
+2016-08-31 02:13:11
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the first time: 1007 ms.
+
+2016-08-31 02:13:11
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the second time: 0 ms.
+
+2016-08-31 02:13:12
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1011 ms
+
+2016-08-31 02:13:12
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 02:13:13
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the third time: 999 ms.
+
+2016-08-31 02:13:13
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the fourth time: 0 ms.
+
+2016-08-31 02:13:13
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The stat 
+hitCount:3  
+hitRate: 0.5 
+evictionCOunt: 2
