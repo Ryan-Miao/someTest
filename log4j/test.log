@@ -5220,3 +5220,30 @@ hitRate: 0.5
 hitCount:3  
 hitRate: 0.5 
 evictionCOunt: 2
+
+2016-08-31 02:23:13
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The time if not cache cost: 1147 ms
+
+2016-08-31 02:23:14
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the first time: 1010 ms.
+
+2016-08-31 02:23:14
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the second time: 0 ms.
+
+2016-08-31 02:23:15
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for new: 1010 ms
+
+2016-08-31 02:23:15
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: Get id456 for the second: 0 ms
+
+2016-08-31 02:23:16
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the third time: 999 ms.
+
+2016-08-31 02:23:16
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: id123 use cache and get for the fourth time: 0 ms.
+
+2016-08-31 02:23:16
+[INFO]-[Thread: main]-[com.test.cache.guava.Example.testSample()]: The stat 
+hitCount:3  
+hitRate: 0.5 
+evictionCount: 2
