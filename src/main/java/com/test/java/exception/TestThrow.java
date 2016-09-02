@@ -71,6 +71,33 @@ public class TestThrow {
         }
     }
 
+    @Test
+    public void testThrowCatchOneCathAnother() throws Exception{
+        try {
+            System.out.println("do sothing.");
+            throwError();
+        } catch (TestException e) {
+            System.out.println("this is the first catch");
+        }catch (Exception e){
+            System.out.println("this is the second catch");
+        }
+    }
+
+    @Test
+    public void testThrowCatchOneThenThrowCatchAnother() throws Exception{
+        try {
+            System.out.println("do sothing.");
+            throwError();
+        } catch (TestException e) {
+            System.out.println("this is the first catch, then throw, the throw will not be catched by the follwing.");
+            throwError();
+        }catch (Exception e){
+            System.out.println("this is the second catch");
+        }
+    }
+
+
+
     private void throwError() throws TestException{
         String param = "the param to transfer";
         String msg = "something expect error.";
