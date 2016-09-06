@@ -1,5 +1,7 @@
 package com.test.json.jackson;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.ArrayType;
 import com.fasterxml.jackson.databind.type.CollectionType;
@@ -38,9 +40,12 @@ public class TestJackson {
         User[] users = mapper.readValue(expected, arrayType);
         Assert.assertEquals("Ryan", users[0].getName());
 
+        expected="[{\"a\":12},{\"b\":23}]";
         CollectionType listType = mapper.getTypeFactory().constructCollectionType(ArrayList.class, User.class);
+        //the sieze of the list is dependon the str json length although the json content is not the POJO type maybe
         List<User> userList = mapper.readValue(expected, listType);
-        Assert.assertEquals("Ryan", userList.get(0).getName());
+        Assert.assertEquals(2, userList.size());
+        Assert.assertNull(userList.get(0).getName());
 
     }
 
@@ -58,6 +63,7 @@ public class TestJackson {
 
 }
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 class User implements Serializable {
     private static final long serialVersionUID = -5952920972581467417L;
     private String name;
