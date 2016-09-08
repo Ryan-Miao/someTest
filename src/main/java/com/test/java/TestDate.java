@@ -144,6 +144,25 @@ public class TestDate {
 
 	}
 
+
+	@Test
+	public void testDateLong() throws Exception{
+		long time = 1473070201000L;
+		Date date = new Date(time);
+		System.out.println(date);
+	}
+
+	@Test
+    public void testDateFormatForZone() throws Exception{
+        String pattern = "yyyy-MM-dd'T'HH:mm:ssZ";
+        long time = 1473070201000L;
+        Date date = new Date(time);
+        System.out.println(date);
+        dateFormat(pattern);
+
+
+    }
+
 	private String timeFormat(Date date, int dateStyle,
 							  int timeStyle) {
 		DateFormat timeFormat;
