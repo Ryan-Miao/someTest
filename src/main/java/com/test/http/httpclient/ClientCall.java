@@ -46,7 +46,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Created by Administrator on 2015/12/1.
  */
-public class http基础 {
+public class ClientCall {
 
     private static HttpClient httpclient = HttpClients.createDefault();
 
@@ -157,6 +157,25 @@ public class http基础 {
             //do not need the rest
             httpGet.abort();
         }
+    }
+
+    @Test
+    public void testGet() throws Exception{
+        String url = "http://localhost:8080/hello/final?msg=hhh";
+        HttpGet httpGet = new HttpGet(url);
+        HttpResponse response = httpclient.execute(httpGet);
+        HttpEntity entity = response.getEntity();
+        System.out.println(EntityUtils.toString(entity));
+        System.out.println("ssss");
+    }
+    @Test
+    public void testPost() throws Exception{
+        String url = "http://localhost:8080/hello/redirect303?msg=hhh";
+        HttpPost post = new HttpPost(url);
+        HttpResponse response = httpclient.execute(post);
+        HttpEntity entity = response.getEntity();
+        System.out.println(EntityUtils.toString(entity));
+        System.out.println("ssss");
     }
 
     /**
