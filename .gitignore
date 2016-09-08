@@ -15,5 +15,8 @@
 /src/main/webapp/WEB-INF/classes/*
 /src/main/webapp/userfiles/*
 /target/
+*.log
+log4j/
 
-
+jsoup.log
+log4j/st.log

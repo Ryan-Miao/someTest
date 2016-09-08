@@ -40,12 +40,13 @@ public class TestJackson {
         User[] users = mapper.readValue(expected, arrayType);
         Assert.assertEquals("Ryan", users[0].getName());
 
-        expected="[{\"a\":12},{\"b\":23}]";
+        expected="[{\"a\":12},{\"b\":23},{\"name\":\"Ryan\"}]";
         CollectionType listType = mapper.getTypeFactory().constructCollectionType(ArrayList.class, User.class);
         //the sieze of the list is dependon the str json length although the json content is not the POJO type maybe
         List<User> userList = mapper.readValue(expected, listType);
-        Assert.assertEquals(2, userList.size());
+        Assert.assertEquals(3, userList.size());
         Assert.assertNull(userList.get(0).getName());
+        Assert.assertEquals("Ryan",userList.get(2).getName());
 
     }
 
