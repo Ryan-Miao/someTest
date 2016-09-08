@@ -20,3 +20,4 @@ log4j/
 
 jsoup.log
 log4j/st.log
+log4j/*
