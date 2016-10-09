@@ -34,4 +34,23 @@ public class TestMessageFormat {
         String names = MessageFormat.format(message, "names");
         System.out.println(names);
     }
+
+    @Test
+    public void testQuote() throws  Exception{
+        String message = "I'm {0}.";
+        String ryan = MessageFormat.format(message, "Ryan");
+        System.out.println(ryan);
+        Assert.assertEquals("Im {0}.", ryan);
+
+
+        message = "I''m {0}.";
+        ryan = MessageFormat.format(message, "Ryan");
+        System.out.println(ryan);
+        Assert.assertEquals("I'm Ryan.", ryan);
+    }
+
+    @Test
+    public void testReplace(){
+        System.out.println("I'm Ryan.".replace("'","''"));
+    }
 }
