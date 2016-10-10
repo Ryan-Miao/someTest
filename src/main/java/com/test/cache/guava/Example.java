@@ -21,9 +21,10 @@ public class Example {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Example.class);
 
-    private LoadingCache<String, ObjFromRemote> graphs = CacheBuilder.newBuilder()
+    private LoadingCache<String, ObjFromRemote> cache = CacheBuilder.newBuilder()
             .recordStats()
             .maximumSize(1)
+            .expireAfterWrite(24, TimeUnit.HOURS)
             .build(new CacheLoader<String, ObjFromRemote>() {
                 @Override
                 public ObjFromRemote load(String key) throws Exception {
@@ -44,32 +45,32 @@ public class Example {
 
         try {
             stopwatch.reset().start();
-            ObjFromRemote id123 = graphs.get("id123");
+            ObjFromRemote id123 = cache.get("id123");
             stopwatch.stop();
             LOGGER.info("id123 use cache and get for the first time: {} ms.", stopwatch.elapsed(TimeUnit.MILLISECONDS));
             stopwatch.reset().start();
-            ObjFromRemote id123_2 = graphs.get("id123");
+            ObjFromRemote id123_2 = cache.get("id123");
             stopwatch.stop();
             LOGGER.info("id123 use cache and get for the second time: {} ms.", stopwatch.elapsed(TimeUnit.MILLISECONDS));
 
             stopwatch.reset().start();
-            ObjFromRemote id456 = graphs.get("id456");
+            ObjFromRemote id456 = cache.get("id456");
             stopwatch.stop();
             LOGGER.info("Get id456 for new: {} ms", stopwatch.elapsed(TimeUnit.MILLISECONDS));
             stopwatch.reset().start();
-            ObjFromRemote id456_2 = graphs.get("id456");
+            ObjFromRemote id456_2 = cache.get("id456");
             stopwatch.stop();
             LOGGER.info("Get id456 for the second: {} ms", stopwatch.elapsed(TimeUnit.MILLISECONDS));
 
             stopwatch.reset().start();
-            ObjFromRemote id123_3 = graphs.get("id123");
+            ObjFromRemote id123_3 = cache.get("id123");
             stopwatch.stop();
             LOGGER.info("id123 use cache and get for the third time: {} ms.", stopwatch.elapsed(TimeUnit.MILLISECONDS));stopwatch.reset().start();
-            ObjFromRemote id123_4 = graphs.get("id123");
+            ObjFromRemote id123_4 = cache.get("id123");
             stopwatch.stop();
             LOGGER.info("id123 use cache and get for the fourth time: {} ms.", stopwatch.elapsed(TimeUnit.MILLISECONDS));
 
-            CacheStats stats = graphs.stats();
+            CacheStats stats = cache.stats();
             LOGGER.info("The stat \nhitCount:{}  \nhitRate: {} \nevictionCount: {}", stats.hitCount(), stats.hitRate(), stats.evictionCount());
 
         } catch (ExecutionException e) {
