@@ -2,6 +2,7 @@ package com.test.java;
 
 import org.junit.Assert;
 import org.junit.Test;
+import sun.plugin2.message.Message;
 
 import java.text.MessageFormat;
 import java.util.Date;
@@ -47,6 +48,22 @@ public class TestMessageFormat {
         ryan = MessageFormat.format(message, "Ryan");
         System.out.println(ryan);
         Assert.assertEquals("I'm Ryan.", ryan);
+    }
+
+    @Test
+    public void testNum() throws Exception{
+        String format = MessageFormat.format("I have {0} $ and I want more {1}", 123456, 123456798);
+        System.out.println(format);
+        Assert.assertEquals("I have 123,456 $ and I want more 123,456,798", format);
+
+        String format1 = MessageFormat.format("num {0,number}", 123465789);
+        System.out.println(format1);
+
+        String format2 = String.format("num %d,%s", 123465789, 12);
+        System.out.println(format2);
+
+        String format3 = String.format("/InfositeProperty/%d/getCanonicalUrl?langId=%d&siteId=%d&returnFullyQualifiedUrl=1", 123456, 123456, 123456789);
+        System.out.println(format3);
     }
 
     @Test
