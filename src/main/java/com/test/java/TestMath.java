@@ -1,5 +1,7 @@
 package com.test.java;
 
+import org.junit.Test;
+
 import java.util.Random;
 
 public class TestMath {
@@ -15,6 +17,16 @@ public class TestMath {
 		Random rand = new Random();
 		int num = rand.nextInt(3);
 		System.out.println(b[num]); 
+	}
+
+	@Test
+	public void testCeil(){
+		double a = 35;
+		double b = 20;
+		double c = a/b;
+		System.out.println("c=="+c);
+		System.out.println("c--ceil="+Math.ceil(c));
+		System.out.println("c--floor="+Math.floor(c));
 	}
 
 }
