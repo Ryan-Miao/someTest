@@ -26,7 +26,8 @@ public class TestHashMap {
         unsortMap.put("m", 2);
         unsortMap.put("f", 9);
 
-        System.out.println(unsortMap);
+        Assert.assertEquals("{a=6, b=5, c=20, d=1, e=7, f=9, z=10, j=50, m=2, n=99}",
+                unsortMap.toString());
     }
 
     @Test
@@ -52,6 +53,7 @@ public class TestHashMap {
                         (e1, e2) -> e1,
                         LinkedHashMap::new
                 ));
-        System.out.println(orderMap);
+        Assert.assertEquals("{n=99, j=50, c=20, z=10, f=9, y=8, e=7, a=6, b=5, m=2, d=1}",
+                orderMap.toString());
     }
 }
