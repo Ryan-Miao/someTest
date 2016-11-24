@@ -1,5 +1,7 @@
 package com.test.java;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.Map;
@@ -80,4 +82,5 @@ public class TestMap {
         //结果：null------返回，不会空指针异常
         System.out.println(map.get("m"));
     }
+
 }
