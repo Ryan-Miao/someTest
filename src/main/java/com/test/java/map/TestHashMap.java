@@ -56,4 +56,12 @@ public class TestHashMap {
         Assert.assertEquals("{n=99, j=50, c=20, z=10, f=9, y=8, e=7, a=6, b=5, m=2, d=1}",
                 orderMap.toString());
     }
+    @Test
+    public void testHash(){
+        Map map = new HashMap();
+
+        int a = 1;
+        int b = 0;
+//        Objects.hash()
+    }
 }

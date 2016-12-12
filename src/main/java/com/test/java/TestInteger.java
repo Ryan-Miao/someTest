@@ -1,5 +1,7 @@
 package com.test.java;
 
+import org.junit.Test;
+
 /**
  * Created by mrf on 2016/2/28.
  */
@@ -33,4 +35,18 @@ public class TestInteger {
         System.out.println(a.equals(b));
 
     }
+
+    @Test
+    public void testChange(){
+        Integer a = 12;
+        Integer b = change(a);
+        System.out.println("a="+a);
+        System.out.println("b="+b);
+    }
+
+    private Integer change(Integer a) {
+        a = 24;
+        return a;
+    }
+
 }
