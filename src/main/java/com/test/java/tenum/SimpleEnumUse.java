@@ -5,7 +5,7 @@ package com.test.java.tenum;
  * Created by Administrator on 2016/3/30.
  */
 public enum SimpleEnumUse {
-    NOT,MILD,MEDIUM,HOT,FLAMING,TEST("test test");
+    NOT,MILD,MEDIUM,HOT,FLAMING, GETVALUE("I'mValue");
 
     private String value;
 
@@ -28,9 +28,11 @@ class TestSE{
         SimpleEnumUse medium = SimpleEnumUse.MEDIUM;
         System.out.println(medium);
         System.out.println(medium.ordinal());
-        System.out.println("toString: "+SimpleEnumUse.TEST.toString());
-        System.out.println("name(): "+SimpleEnumUse.TEST.name());
-        System.out.println(SimpleEnumUse.TEST.getValue());
+        System.out.println("toString: "+SimpleEnumUse.GETVALUE.toString());
+        System.out.println("name(): "+SimpleEnumUse.GETVALUE.name());
+        System.out.println(SimpleEnumUse.GETVALUE.getValue());
         System.out.println(SimpleEnumUse.MEDIUM.getValue());
+
+        System.out.println(SimpleEnumUse.valueOf("GETVALUE"));
     }
 }

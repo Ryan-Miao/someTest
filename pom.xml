@@ -159,13 +159,13 @@
             <version>${fastjson.version}</version>
         </dependency> -->
 
-        <!-- TEST begin -->
+        <!-- GETVALUE begin -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
         </dependency>
-        <!-- TEST end -->
+        <!-- GETVALUE end -->
 
         <!-- httpclient -->
         <dependency>
