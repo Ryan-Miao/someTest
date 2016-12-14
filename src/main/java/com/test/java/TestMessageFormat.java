@@ -70,4 +70,11 @@ public class TestMessageFormat {
     public void testReplace(){
         System.out.println("I'm Ryan.".replace("'","''"));
     }
+
+    @Test
+    public void testDoubleQuote(){
+        String content="'{'\"booking_date\":\"{0}\",\"rooms\":['{'\"nights\":['{'\"night\":\"1\",\"cost\":\"100\"'}']'}']}";
+        String format = MessageFormat.format(content, "111");
+        System.out.println(format);
+    }
 }
