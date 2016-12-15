@@ -74,6 +74,26 @@ public class TestJackson {
 
     }
 
+    @Test
+    public void testMap() throws IOException {
+        String content = "{\n" +
+                "  \"booking_date\": \"2016-07-28\",\n" +
+                "  \"rooms\": [\n" +
+                "    {\n" +
+                "      \"nights\": [\n" +
+                "        {\n" +
+                "          \"night\": \"1\",\n" +
+                "          \"cost\": \"100\"\n" +
+                "        }\n" +
+                "      ]\n" +
+                "    }\n" +
+                "  ]\n" +
+                "}";
+
+        Map map = mapper.readValue(content, Map.class);
+        System.out.println(map);
+    }
+
 }
 
 @JsonIgnoreProperties(ignoreUnknown = true)
