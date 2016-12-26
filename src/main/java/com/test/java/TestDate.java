@@ -184,4 +184,19 @@ public class TestDate {
 		td.dateFormat("yyyy-MM-dd");
 	}
 
+
+	@Test
+	public void testMicroseconds() throws ParseException {
+		String d = "2016-04-26T13:50:51.000+0000";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd'T'hh:mm:ss.SSSZ");
+		String format = simpleDateFormat.format(new Date());
+		System.out.println(format);
+		Date parse = simpleDateFormat.parse(d);
+		System.out.println(parse);
+
+		simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd'T'hh:mm:ss.SSS'Z'");
+		String format1 = simpleDateFormat.format(new Date());
+		System.out.println(format1);
+	}
+
 }
