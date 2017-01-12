@@ -152,13 +152,6 @@
             <version>${jackson.version}</version>
         </dependency>
 
-        <!-- fastjson json
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
-        </dependency> -->
-
         <!-- GETVALUE begin -->
         <dependency>
             <groupId>junit</groupId>
@@ -240,6 +233,11 @@
             <groupId>com.jsoniter</groupId>
             <artifactId>jsoniter</artifactId>
             <version>0.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.22</version>
         </dependency>
 
 

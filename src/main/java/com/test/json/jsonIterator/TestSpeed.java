@@ -1,5 +1,6 @@
 package com.test.json.jsonIterator;
 
+import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.jsoniter.JsonIterator;
@@ -10,11 +11,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by rmiao on 12/28/2016.
  */
-public class TestJsonIterator {
+public class TestSpeed {
     private String json;
     @Before
     public void setUp(){
@@ -136,7 +140,8 @@ public class TestJsonIterator {
     @Test
     public void testSpeed() throws IOException {
         long gson_start = System.currentTimeMillis();
-        for (int i = 0; i < 100; i++) {
+        int times = 1;
+        for (int i = 0; i < times; i++) {
             byGson();
         }
         long gson_end = System.currentTimeMillis();
@@ -144,34 +149,64 @@ public class TestJsonIterator {
 
 
         long jackson_start = System.currentTimeMillis();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < times; i++) {
             byJackson();
         }
         long jackson_end = System.currentTimeMillis();
         long time_jackson = jackson_end - jackson_start;
 
-        System.out.println(time_gson);
-        System.out.println(time_jackson);
-        System.out.println(time_gson-time_jackson);
+        long fast_start = System.currentTimeMillis();
+        for (int i = 0; i < times; i++) {
+            byFastJson();
+        }
+        long fast_end = System.currentTimeMillis();
+        long time_fast = fast_end - fast_start;
 
+        Map map = new HashMap();
+        map.put("gson", time_gson);
+        map.put("jackson", time_jackson);
+        map.put("fastJson", time_fast);
+
+        map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
         //you bug
 //        byIterator();
     }
 
-    private void byGson() {
+    @Test
+    public void byFastJson() {
+        AwardDetail awardDetail = JSON.parseObject(json, AwardDetail.class);
+        Assert.assertNotNull(awardDetail.getId());
+        Assert.assertNotNull(awardDetail.getVariations().getDark().get(0).getImgConfig());
+        String s = JSON.toJSONString(awardDetail);
+//        System.out.println(s.equals(json));
+    }
+
+    @Test
+    public void byGson() {
         Gson gson = new Gson();
         AwardDetail awardDetail = gson.fromJson(json, AwardDetail.class);
         Assert.assertNotNull(awardDetail.getId());
         Assert.assertNotNull(awardDetail.getVariations().getDark().get(0).getImgConfig());
+        String s = gson.toJson(awardDetail);
+//        System.out.println(s);
+//        System.out.println(s.equals(json));
     }
 
-    private void byJackson() throws IOException {
+    @Test
+    public  void byJackson() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         AwardDetail awardDetail = objectMapper.readValue(json, AwardDetail.class);
         Assert.assertNotNull(awardDetail.getId());
         Assert.assertNotNull(awardDetail.getVariations().getDark().get(0).getImgConfig());
+        String s = objectMapper.writeValueAsString(awardDetail);
+//        System.out.println(s);
+//        System.out.println(s.equals(json));
     }
 
+    /**
+     * bug
+     * @throws IOException
+     */
     private void byIterator() throws IOException {
 //        JsonIterator iter = JsonIterator.parse("{\"id\":\"8554a76c-8334-4b45-9730-80b7feafa428\"}");
         JsonIterator iter = JsonIterator.parse(json);

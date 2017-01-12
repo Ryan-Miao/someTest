@@ -18,7 +18,7 @@ public class AwardDetail {
     private String awardLandingPageURL;
     private String status;// live/ in progress
     private Integer currentStep;
-    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ",timezone = "GMT")
+//    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ",timezone = "GMT")
     private Date lastUpdateDate;
     private String lastUpdateBy;
     /**the award styles**/
