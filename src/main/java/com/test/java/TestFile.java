@@ -27,7 +27,7 @@ public class TestFile {
     }
 
     public static void main(String[] args) throws IOException {
-        String dest = "D:\\projects\\EPC";
+        String dest = "D:\\projects\\work";
         File file = new File(dest);
 
         Scanner scanner = new Scanner(System.in);
