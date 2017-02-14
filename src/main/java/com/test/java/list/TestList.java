@@ -2,6 +2,7 @@ package com.test.java.list;
 
 import com.google.common.collect.Maps;
 import com.test.java.lambda.entity.User;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -25,5 +26,15 @@ public class TestList {
         users_a.add(new User(1));
 
         System.out.println(map);
+    }
+
+    @Test
+    public void testArraysAs(){
+        List<String> list = Arrays.asList("a","b");
+        try {
+            list.add("c");
+        } catch (Exception e) {
+            Assert.assertTrue(e instanceof  UnsupportedOperationException);
+        }
     }
 }
