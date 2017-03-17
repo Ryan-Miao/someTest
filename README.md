@@ -1,4 +1,7 @@
 # someTest
+
+[![Build Status](https://travis-ci.org/winsnow/someTest.svg?branch=master)](https://travis-ci.org/winsnow/someTest)
+
 ## 本项目测试范围
 这个是我搭建第一个测试的项目，修改成了maven，本来修改springmvc的，但是有个问题没解决，放下了。springmvc的web方面的测试
 就放到dinner和springmvc这两个测试项目去。
