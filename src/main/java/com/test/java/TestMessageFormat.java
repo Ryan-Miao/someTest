@@ -2,7 +2,6 @@ package com.test.java;
 
 import org.junit.Assert;
 import org.junit.Test;
-import sun.plugin2.message.Message;
 
 import java.text.MessageFormat;
 import java.util.Date;
