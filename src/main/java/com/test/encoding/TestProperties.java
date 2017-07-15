@@ -1,6 +1,7 @@
 package com.test.encoding;
 
 import org.apache.commons.codec.binary.Hex;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -111,5 +112,8 @@ public class TestProperties {
     @Test
     public void test63(){
         System.out.println((char) 63);
+        //?
     }
+
+
 }
