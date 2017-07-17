@@ -59,14 +59,14 @@ public class TestProperties {
         properties.forEach((k,v) -> {
             try {
                 v = new String(v.toString().getBytes("iso-8859-1"), "utf-8");
-                System.out.println("k="+v);
+                System.out.println(k+"="+v);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
         });
-        //k=中文
-        //ck=??
-        //k=abcd
+        //cn=中文
+        //cn_unicode=??
+        //en=abcd
     }
 
     /**
