@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import static java.util.Comparator.comparing;
 import static java.util.Comparator.comparingInt;
 
 /**
@@ -21,9 +22,9 @@ public class AppleSort {
     public void setUp() {
         inventory = new ArrayList<>();
         inventory.add(new Apple("red", 1));
-        inventory.add(new Apple("red", 3));
+        inventory.add(new Apple("green", 3));
         inventory.add(new Apple("red", 2));
-        inventory.add(new Apple("red", 21));
+        inventory.add(new Apple("yellow", 21));
     }
 
     @Test
@@ -81,6 +82,16 @@ public class AppleSort {
         inventory.sort(comparingInt(Apple::getWeight).reversed());
 
         printApples();
+    }
+
+    /**
+     * 比较器链
+     */
+    @Test
+    public void sort7(){
+       inventory.sort(comparing(Apple::getColor)
+               .reversed()
+               .thenComparingInt(Apple::getWeight));
     }
 
     private void printApples() {
