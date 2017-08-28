@@ -1,6 +1,9 @@
 package com.test.json.gson;
 
 import com.google.gson.Gson;
+import com.test.java.lambda.entity.User;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.Date;
 
@@ -18,5 +21,14 @@ public class TestGson {
         int one = gson.fromJson("1", int.class);
         Date sdate = gson.fromJson("Nov 8, 2016 6:28:21 PM", Date.class);
 
+    }
+
+    @Test
+    public void print(){
+        Gson gson = new Gson();
+        User user = new User(12, "test");
+        String s = gson.toJson(user);
+        System.out.println(s);
+        Assert.assertEquals("{\"id\":12,\"name\":\"test\"}", s);
     }
 }
