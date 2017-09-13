@@ -1,5 +1,6 @@
 package com.test.java.list;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.test.java.lambda.entity.User;
 import org.junit.Assert;
@@ -7,6 +8,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -35,6 +37,118 @@ public class TestList {
             list.add("c");
         } catch (Exception e) {
             Assert.assertTrue(e instanceof  UnsupportedOperationException);
+            return;
         }
+
+        Assert.fail("Should not run in here");
+    }
+
+
+
+    @Test
+    public void testRemove(){
+        ArrayList<Integer> integers = Lists.newArrayList(1, 2, 3, 4);
+        System.out.println(integers);
+        //移除索引
+        integers.remove(1);
+        System.out.println(integers);
+    }
+
+    @Test
+    public void testRemove2(){
+        List<Integer> integers = new ArrayList<>(5);
+        integers.add(1);
+        integers.add(2);
+        integers.add(2);
+        integers.add(4);
+        integers.add(5);
+
+        for (int i = 0; i < integers.size(); i++) {
+            if (integers.get(i)%2==0){
+                integers.remove(i);
+            }
+        }
+
+        System.out.println(integers);
+    }
+
+    /**
+     * 报错： java.lang.UnsupportedOperationException
+     */
+    @Test
+    public void testRemove3(){
+        List<String> list = Arrays.asList("a","b");
+        list.add("c");
+    }
+
+    /**
+     * 报错java.util.ConcurrentModificationException
+     */
+    @Test
+    public void testRemove4(){
+        List<String> strings = new ArrayList<>();
+        strings.add("a");
+        strings.add("b");
+        strings.add("c");
+        strings.add("d");
+
+        for (String string : strings) {
+            strings.remove(string);
+        }
+    }
+
+    /**
+     * 报错： java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+     */
+    @Test
+    public void testRemove5(){
+        List<String> strings = new ArrayList<>();
+        strings.add("a");
+        strings.add("b");
+        strings.add("c");
+        strings.add("d");
+
+        int size = strings.size();
+        for (int i = 0; i < size; i++) {
+            strings.remove(i);
+        }
+
+    }
+
+    /**
+     * 报错： java.util.ConcurrentModificationException
+     */
+    @Test
+    public void testRemove6(){
+        List<String> strings = new ArrayList<>();
+        strings.add("a");
+        strings.add("b");
+        strings.add("c");
+        strings.add("d");
+
+        Iterator<String> iterator = strings.iterator();
+        while (iterator.hasNext()){
+            String next = iterator.next();
+            strings.remove(next);
+        }
+
+        System.out.println(strings);
+    }
+
+    @Test
+    public void testRemove7(){
+        List<String> strings = new ArrayList<>();
+        strings.add("a");
+        strings.add("b");
+        strings.add("c");
+        strings.add("d");
+
+        Iterator<String> iterator = strings.iterator();
+        while (iterator.hasNext()){
+            String next = iterator.next();
+            iterator.remove();
+        }
+
+        System.out.println(strings);
     }
 }
