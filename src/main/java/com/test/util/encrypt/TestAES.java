@@ -11,7 +11,7 @@ public class TestAES {
     private static String path = System.getProperty("user.dir")+"\\src\\main\\resources\\";
     private static String origin = path+ "origin.json";
     private static String dest = path+"dest.txt";
-    private static String key = "234234sdfs";
+    private static String key = "7521_7521_7521_7521_Mrf_$";
 
     public static void readTxt(String filePath) throws IOException {
         File file = new File(filePath);
