@@ -14,7 +14,7 @@ import java.util.List;
 public class PostorderTraversal {
 
     @Test
-    public void testPostOrder(){
+    public void testPostOrder() {
         String root = "/Users/ryan/workspace/learning/hexo-blog-src";
         int stop = 3;
         ArrayList<String> ignores = Lists.newArrayList(".git", ".deploy_git", "node_modules", ".DS_Store");
@@ -23,50 +23,56 @@ public class PostorderTraversal {
     }
 
     private void printTree(String rootFile, int stop, List<String> ignores) {
-        printTree(new File(rootFile), 0, stop, ignores, false);
+        printTree(new File(rootFile), 0, stop, ignores, false, true);
     }
-    private void printTree(File rootFile, int level, int stop, List<String> ignores, boolean last) {
+
+    private void printTree(File rootFile, int level, int stop, List<String> ignores, boolean isLastChild, boolean isParentLast) {
         String name = rootFile.getName();
-        if (level > stop || ignores.stream().anyMatch(name::contains)){
+        if (level > stop || ignores.stream().anyMatch(name::contains)) {
             return;
         }
-        if (level == 0){
+        if (level == 0) {
             System.out.println(".");
-        }else {
-            prettyPrint(level, rootFile, last);
+        } else {
+            prettyPrint(level, rootFile, isLastChild, isParentLast);
         }
 
-        if (rootFile.isDirectory()){
+        if (rootFile.isDirectory()) {
             File[] files = rootFile.listFiles();
-            if (files != null ){
+            if (files != null) {
                 int length = files.length;
-                for (int i = 0; i < length ; i++) {
-                    if (i == length - 1){
-                        printTree(files[i], level+1, stop, ignores, true);
-                    }else{
-                        printTree(files[i], level+1, stop, ignores, false);
+                for (int i = 0; i < length; i++) {
+                    if (i == length - 1) {
+                        //
+                        printTree(files[i], level + 1, stop, ignores, true, isLastChild);
+                    } else {
+                        printTree(files[i], level + 1, stop, ignores, false, isLastChild);
                     }
                 }
             }
         }
     }
 
-    private void prettyPrint(int level, File file,  boolean isLast) {
+    private void prettyPrint(int level, File file, boolean isLastChild, boolean isParentLast) {
         StringBuilder sb = new StringBuilder();
-        if (level != 1){
+        if (level != 1) {
             sb.append("│");
         }
 
-        for (int i = 0; i < level-2; i++) {
+        for (int i = 0; i < level - 2; i++) {
+            if (isParentLast && i == level - 3) {
+                sb.append("    ");
+                break;
+            }
             sb.append("   |");
         }
-        if (level != 1){
+        if (level != 1) {
             sb.append("   ");
         }
 
-        if (isLast){
+        if (isLastChild) {
             sb.append("└──");
-        }else{
+        } else {
             sb.append("├──");
         }
 
