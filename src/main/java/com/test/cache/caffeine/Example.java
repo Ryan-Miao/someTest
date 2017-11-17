@@ -2,11 +2,9 @@ package com.test.cache.caffeine;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
-import com.google.common.collect.ImmutableMap;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
