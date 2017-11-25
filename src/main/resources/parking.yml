@@ -1,0 +1,44 @@
+amenities:
+  'parkingGroup':
+      amenityId : 'parkingGroup'
+      type : radioGroup
+      amenityType: abstractAmenity
+      show:  hide
+  'parkingGroup:selfValetGroup':
+      amenityId : 'parkingGroup:selfValetGroup'
+      type : group
+      amenityType: abstractAmenity
+      show:  hide
+  'parkingGroup:selfValetGroup:selfParking':
+      amenityId : 'parkingGroup:selfValetGroup:selfParking'
+      type : checkbox
+      amenityType: attributeAmenity
+      msgKey: parking_selfparking
+      show:  always
+      negativeId: 1073742739
+  'parkingGroup:selfValetGroup:selfParking:chargeGroup':
+      amenityId : 'parkingGroup:selfValetGroup:selfParking:chargeGroup'
+      type : radioGroup
+      amenityType: abstractAmenity
+      show:  hide
+  'parkingGroup:selfParking:chargeGroup:free':
+      amenityId : 'parkingGroup:selfParking:chargeGroup:free'
+      type : radio
+      amenityType: attributeAmenity
+      msgKey: parking_free
+      show: always
+      attributeId: 3861
+  'parkingGroup:selfParking:chargeGroup:surcharge':
+      amenityId : 'parkingGroup:selfParking:chargeGroup:surcharge'
+      type : radio
+      amenityType: attributeAmenity
+      msgKey: parking_surcharge
+      show: always
+      attributeId: 3862
+  'parkingGroup:selfParking:chargeGroup:surcharge:amount':
+      amenityId : 'parkingGroup:selfParking:chargeGroup:surcharge:amount'
+      type : text
+      amenityType: attributeAmenity
+      msgKey: parking_surcharge
+      show: always
+      attributeId: 3862
