@@ -25,9 +25,9 @@ public class ClientConnectionRelease {
             try {
                 System.out.println("-----------------------------");
                 System.out.println(response.getStatusLine());
-                //get hold of the response entity
+                //get hold of the response Entity
                 HttpEntity entity = response.getEntity();
-                //If the response does not enclose an entity,there is no need
+                //If the response does not enclose an Entity,there is no need
                 //to bother about connection release
                 if(entity!=null){
                     InputStream instream = entity.getContent();

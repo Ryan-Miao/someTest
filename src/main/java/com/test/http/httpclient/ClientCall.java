@@ -202,7 +202,7 @@ public class ClientCall {
         System.out.println("======================================");
         System.out.println("======================================");
         //java.io.IOException: Attempted read from closed stream.
-//        System.out.println(EntityUtils.toString(entity));
+//        System.out.println(EntityUtils.toString(Entity));
 
     }
 
