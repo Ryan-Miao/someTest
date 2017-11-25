@@ -25,12 +25,12 @@ public class SnakeYAMLTest {
         options.setPrettyFlow(true);
 
         Yaml yaml = new Yaml(options);
-        String name = "parking2.yml";
+        String name = "config.test.yaml";
         InputStream resourceAsStream = this.getClass().getClassLoader().getResourceAsStream(name);
         Object load = yaml.load(resourceAsStream);
         System.out.println(load);
 
-        Writer writer = new FileWriter("D:\\workspace\\test\\someTest\\src\\main\\resources\\parking3.yml");
+        Writer writer = new FileWriter("D:\\workspace\\test\\someTest\\src\\main\\resources\\config.test2.yaml");
         yaml.dump(load, writer);
     }
 }
