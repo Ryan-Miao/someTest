@@ -5,6 +5,7 @@ import com.test.java8.streams.entity.Dish;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Comparator;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -35,10 +36,21 @@ public class StreamExample {
     public void demo(){
         List<String> threeHighCaloricDishNames = menu.stream()
                 .filter(dish -> dish.getCalories() > 300)
+//                .sorted((o1,o2) -> o2.getCalories() - o1.getCalories())
+//                .sorted(Comparator.comparingInt(Dish::getCalories).reversed())
                 .map(Dish::getName)
                 .limit(3)
                 .collect(toList());
 
         System.out.println(threeHighCaloricDishNames);
+    }
+
+    @Test
+    public void testDistinct(){
+        List<Integer> list = Lists.newArrayList(1,2,3,4,1,2,3);
+        List<Integer> collect = list.stream()
+                .distinct()
+                .collect(toList());
+        System.out.println(collect);
     }
 }
