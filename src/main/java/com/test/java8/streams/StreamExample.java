@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.util.Comparator;
 import java.util.List;
 
+import static java.util.stream.Collectors.mapping;
 import static java.util.stream.Collectors.toList;
 
 /**
@@ -52,5 +53,20 @@ public class StreamExample {
                 .distinct()
                 .collect(toList());
         System.out.println(collect);
+    }
+
+    /**
+     * Stream does affect origin
+     */
+    @Test
+    public void testCopy(){
+        List<Dish> result = menu.stream()
+                .peek(d -> d.setType(Dish.Type.OTHER))
+                .collect(toList());
+
+        result.forEach(dish -> System.out.print(dish.getType()));
+        System.out.println();
+        System.out.println("------------------------");
+        menu.forEach(dish -> System.out.print(dish.getType()));
     }
 }
