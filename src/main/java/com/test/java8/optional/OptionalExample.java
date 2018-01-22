@@ -23,6 +23,15 @@ public class OptionalExample {
     }
 
     @Test
+    public void FieldNullTest(){
+        final User user = new User(1, null);
+        final String name = Optional.ofNullable(user)
+                .map(User::getName)
+                .orElse("The user is null.");
+
+        System.out.println(name);
+    }
+    @Test
     public void NoneNullTest(){
         final User user = new User(1, "Ryan");
         final String name = Optional.ofNullable(user)
