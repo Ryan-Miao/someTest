@@ -31,6 +31,21 @@ public class TestList {
     }
 
     @Test
+    public void testList(){
+        final List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("a");
+
+        final String one = list.get(0);
+        final int size = list.size();
+
+        Assert.assertEquals("a", one);
+        Assert.assertEquals(4, size);
+    }
+
+    @Test
     public void testArraysAs(){
         List<String> list = Arrays.asList("a","b");
         try {
