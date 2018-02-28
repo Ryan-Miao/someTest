@@ -58,18 +58,6 @@ public class TestList {
         Assert.fail("Should not run in here");
     }
 
-    @Test
-    public void testList(){
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(2);
-
-        System.out.println(list.get(0));
-        System.out.println(list.get(1));
-        System.out.println(list.size());
-    }
-
 
 
     @Test
