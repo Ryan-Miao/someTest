@@ -12,7 +12,23 @@ import java.util.stream.Collectors;
 public class TestHashMap {
 
     @Test
-    public void testHashMapShouldBeOrderedButNotAlpha(){
+    public void testPut() {
+        final HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("a", 1);
+
+        int a = 1 << 30;
+        System.out.println(a);
+
+    }
+
+    @Test
+    public void testAnd() {
+       HashMap<String, Object> map = new HashMap<>(3);
+       map.put("1",1);
+    }
+
+    @Test
+    public void testHashMapShouldBeOrderedButNotAlpha() {
         Map<String, Integer> unsortMap = new HashMap<>();
         unsortMap.put("z", 10);
         unsortMap.put("a", 6);
@@ -31,7 +47,7 @@ public class TestHashMap {
     }
 
     @Test
-    public void testHashMapSortByValueDesc(){
+    public void testHashMapSortByValueDesc() {
         Map<String, Integer> unsortMap = new HashMap<>();
         unsortMap.put("z", 10);
         unsortMap.put("b", 5);
@@ -56,8 +72,9 @@ public class TestHashMap {
         Assert.assertEquals("{n=99, j=50, c=20, z=10, f=9, y=8, e=7, a=6, b=5, m=2, d=1}",
                 orderMap.toString());
     }
+
     @Test
-    public void testHash(){
+    public void testHash() {
         Map map = new HashMap();
 
         int a = 1;
