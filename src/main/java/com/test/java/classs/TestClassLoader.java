@@ -5,8 +5,16 @@ package com.test.java.classs;
  * Created by Administrator on 2016/3/22.
  */
 public class TestClassLoader {
-    static{
-        int i = 5;//局部变量
+    public static void main(String[] args) {
+        System.out.println(TestStr.a);
     }
-    int i = 4;
+}
+
+class TestStr{
+    //为啥结果不一样
+//    static final int a = 1;
+    static final Integer a = 1;
+    static {
+        System.out.println("2");
+    }
 }

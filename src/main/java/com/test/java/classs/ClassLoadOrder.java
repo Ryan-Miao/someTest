@@ -46,6 +46,7 @@ public class ClassLoadOrder extends Father{
 
     public static void main(String[] args) {
         ClassLoadOrder c = new ClassLoadOrder();
+        System.out.println(c.k);
     }
 }
 
