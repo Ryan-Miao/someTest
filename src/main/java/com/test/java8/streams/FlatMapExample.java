@@ -1,6 +1,7 @@
 package com.test.java8.streams;
 
 import com.google.common.collect.Lists;
+import java.util.Arrays;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,10 +15,10 @@ import java.util.stream.Stream;
 public class FlatMapExample {
 
     @Test
-    public void useToFlatTwoList(){
-        final List<Integer> a = Lists.newArrayList(1,1);
-        final List<Integer> b = Lists.newArrayList(2,2);
-        final List<Integer> c = Lists.newArrayList(3,3);
+    public void useToFlatTwoList() {
+        final List<Integer> a = Lists.newArrayList(1, 1);
+        final List<Integer> b = Lists.newArrayList(2, 2);
+        final List<Integer> c = Lists.newArrayList(3, 3);
 
         //目标将三个list合成一个
         List<Integer> rs = Stream.of(a, b, c)
@@ -36,5 +37,20 @@ public class FlatMapExample {
          * 看来，是这样。
          * 拼接完成之后，收集。
          */
+    }
+
+    @Test
+    public void flatMap() {
+        final List<String> words = Lists.newArrayList( "Hello", "worlds");
+
+        List<String> collect = words.stream()
+//                .flatMap(w -> Arrays.stream(w.split("")))
+                .map(w -> w.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println(collect);
+
     }
 }
