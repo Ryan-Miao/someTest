@@ -36,7 +36,7 @@ public class JsoupProviceTest {
 //		TestConDataBase.initDataBase();
 
 		// 获取全国各个省级信息
-		Document connect = connect("http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2013/");
+		Document connect = connect("http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2016/index.html");
 		Elements rowProvince = connect.select("tr." + cssMap.get(level));
 		for (Element provinceElement : rowProvince)// 遍历每一行的省份城市
 		{
